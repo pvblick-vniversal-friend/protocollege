@@ -1,0 +1,23 @@
+{
+  "readingGroups": [
+    {
+      "title": "RG Biweekly",
+      "date": "2026-01-09",
+      "time": "15:45 UTC",
+      "duration": "77 minutes",
+      "topic": "Protocols and Institutions",
+      "link": "https://meet.example.com/room1",
+      "status": "upcoming"
+    }
+  ],
+  "sessions": [
+    {
+      "title": "Protocol DJaming",
+      "date": "2026-01-17",
+      "time": "15:45 UTC",
+      "link": "https://meet.example.com/session1",
+      "status": "upcoming"
+    }
+  ]
+}
+

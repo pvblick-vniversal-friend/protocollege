@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% if title %}{{ title }} | {% endif %}{{ site.title }}</title>
+    <meta name="description" content="{{ description or site.description }}">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="alternate" type="application/rss+xml" title="{{ site.title }} RSS Feed" href="/feed.xml">
+    {% if pageType == "wiki" %}
+    <style>
+        .wiki-content a[href^="/"] {
+            color: #0066cc;
+            text-decoration: underline;
+        }
+        .wiki-content a[href^="/"]:hover {
+            color: #004499;
+        }
+    </style>
+    {% endif %}
+</head>
+<body>
+    {% include "components/header.njk" %}
+    
+    <main class="main-content">
+        {{ content | safe }}
+    </main>
+    
+    {% include "components/footer.njk" %}
+    {% mermaid_js %}
+</body>
+</html>
+

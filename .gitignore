@@ -1,0 +1,71 @@
+# Dependencies
+node_modules/
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Build output
+dist/
+_site/
+.11ty.js
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+*.env
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.classpath
+.settings/
+
+# Media/Uploads (keep user uploads out of repo)
+uploads/
+media/
+videos/
+images/user-uploads/
+public/uploads/
+
+# Members/User data
+data/members/
+members.json
+*.csv
+*.xlsx
+
+# Secrets
+secrets/
+*.pem
+*.key
+config/secrets.json
+
+# Agents (in development)
+src/agents/
+_data/agents.json
+
+# Temporary files
+*.tmp
+*.temp
+.cache/
+

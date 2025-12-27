@@ -1,0 +1,33 @@
+{
+  "name": "protocollege",
+  "version": "0.1.0",
+  "description": "Protocollege - generating proto-knowledge through proto-collage",
+  "scripts": {
+    "build": "eleventy",
+    "serve": "eleventy --serve",
+    "dev": "concurrently \"eleventy --serve\" \"npm run watch:css\"",
+    "watch:css": "echo 'Add CSS watcher if needed'"
+  },
+  "keywords": [
+    "static-site-generator",
+    "eleventy",
+    "wiki",
+    "knowledge-base"
+  ],
+  "author": "Protocollege Community",
+  "license": "AGPL-3.0",
+  "dependencies": {
+    "@11ty/eleventy": "^2.0.1",
+    "@11ty/eleventy-plugin-rss": "^1.2.0",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
+    "@photogabble/eleventy-plugin-interlinker": "^1.0.0",
+    "@kevingimbel/eleventy-plugin-mermaid": "^1.0.0",
+    "markdown-it": "^13.0.2",
+    "markdown-it-attrs": "^4.1.6",
+    "luxon": "^3.4.4"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
+
