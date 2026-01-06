@@ -2,10 +2,12 @@
 
 > Generating proto-knowledge through proto-collage
 
-The Protocollege is a community around the study of the epustemology and ehtics of protocols, focsuing on scientific practice.
+The Protocollege is a community around the study of the epistemology and ethics of protocols, focusing on scientific practice.
 
 This is the community's website, to serve as public repository of activities, projects and sessions.
 The static site is built with [Eleventy (11ty)](https://www.11ty.dev/).
+
+The goal of this website is to not only create a container for our small group's activities, but a template for other PROTOCOLLEGES to fork and customize. This is the first step to the making of *an institution, not an institute*.
 
 ## Version
 
