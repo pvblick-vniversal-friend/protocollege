@@ -1,8 +1,12 @@
 {
+  "Zoom": [
+   { "link": "https://tum-conf.zoom-x.de/j/63725445133?pwd=LIJsIR2TiLQocqhsxa3lPXjq9Z7gxS.1" }
+  ],
+
   "readingGroups": [
     {
       "title": "RG Biweekly",
-      "date": "2026-01-09",
+      "date": "2026-01-14",
       "time": "15:45 UTC",
       "duration": "77 minutes",
       "topic": "Protocols and Institutions",
@@ -10,10 +14,11 @@
       "status": "upcoming"
     }
   ],
+  
   "sessions": [
     {
       "title": "Protocol DJaming",
-      "date": "2026-01-17",
+      "date": "2026-01-21",
       "time": "15:45 UTC",
       "link": "https://meet.example.com/session1",
       "status": "upcoming"
