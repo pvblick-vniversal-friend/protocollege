@@ -12,6 +12,8 @@ The Protocollege is a loose asseblage of unruly researchers, interested in the p
 - **[Blog](/blog/)** - Latest updates and reflections
 - **[About](/about/)** - Learn more about the project
 
+---
+
 ## Upcoming Events
 
 {% for group in schedule.readingGroups %}

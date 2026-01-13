@@ -6,7 +6,7 @@
   "readingGroups": [
     {
       "title": "RG Biweekly",
-      "date": "2026-01-14",
+      "date": "2026-01-21",
       "time": "15:45 UTC",
       "duration": "77 minutes",
       "topic": "Protocols and Institutions",
@@ -18,7 +18,7 @@
   "sessions": [
     {
       "title": "Protocol DJaming",
-      "date": "2026-01-21",
+      "date": "2026-01-28",
       "time": "15:45 UTC",
       "link": "https://meet.example.com/session1",
       "status": "upcoming"
