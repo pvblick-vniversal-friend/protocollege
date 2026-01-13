@@ -4,12 +4,12 @@ title: Activities
 description: Community projects and initiatives
 ---
 
-
 {% for activity in activities.activities %}
 {% if activity.status == "active" %}
 ### [{{ activity.title }}]({{ activity.link }})
 
 {{ activity.description }}
+
 
 {% if activity.tags %}
 Tags: {% for tag in activity.tags %}<span class="tag">{{ tag }}</span> {% endfor %}

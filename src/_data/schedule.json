@@ -6,23 +6,33 @@
   "readingGroups": [
     {
       "title": "RG Biweekly",
-      "date": "2026-01-21",
+      "date": "2026-01-28",
       "time": "15:45 UTC",
       "duration": "77 minutes",
-      "topic": "Protocols and Institutions",
+      "topic": "Institutional Ecologies & Boundary Objects",
       "link": "https://meet.example.com/room1",
-      "status": "upcoming"
+      "status": "TBC"
     }
   ],
   
   "sessions": [
     {
-      "title": "Protocol DJaming",
-      "date": "2026-01-28",
+      "title": "New Year Retro",
+      "date": "2026-01-14",
       "time": "15:45 UTC",
+      "topic": "Reflections & Plans",
       "link": "https://meet.example.com/session1",
       "status": "upcoming"
+    },
+    {
+      "title": "New Year Retro",
+      "date": "2026-01-21",
+      "time": "15:45 UTC",
+      "topic": "Projects & Grants",
+      "link": "https://meet.example.com/session1",
+      "status": "TBC"
     }
   ]
 }
+
 

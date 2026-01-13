@@ -16,6 +16,8 @@ The Protocollege is a loose asseblage of unruly researchers, interested in the p
 
 ## Upcoming Events
 
+<!--
+
 {% for group in schedule.readingGroups %}
 {% if group.status == "upcoming" %}
 **{{ group.title }}**
@@ -23,6 +25,8 @@ The Protocollege is a loose asseblage of unruly researchers, interested in the p
 Topic: {{ group.topic }}
 {% endif %}
 {% endfor %}
+
+-->
 
 {% for group in schedule.sessions %}
 {% if group.status == "upcoming" %}
