@@ -20,7 +20,8 @@ The Protocollege is a loose asseblage of unruly researchers, interested in the p
 {% if group.status == "upcoming" %}
 **{{ group.title }}**
 {{ group.date }} at {{ group.time }}
-Topic: {{ group.topic }}
+{{ group.topic }}
+{{ group.authors }}
 {% endif %}
 {% endfor %}
 
@@ -30,6 +31,7 @@ Topic: {{ group.topic }}
 **{{ group.title }}**
 {{ group.date }} at {{ group.time }}
 {{ group.topic }}
+{{ group.pass }}
 {% endif %}
 {% endfor %}
 

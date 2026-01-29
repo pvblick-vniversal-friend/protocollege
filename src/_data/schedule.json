@@ -6,21 +6,23 @@
   "readingGroups": [
     {
       "title": "RG Biweekly",
-      "date": "2026-01-28",
-      "time": "15:45 UTC",
+      "date": "2026-02-02",
+      "time": "15:30 UTC",
       "duration": "77 minutes",
-      "topic": "Institutional Ecologies & Boundary Objects",
+      "topic": "'Institutional Ecology, Tranlations & Boundary Objects'",
+      "authors": "S.L. Star & James R. Griesemer",
       "link": "https://meet.example.com/room1",
-      "status": "TBC"
+      "status": "upcoming"
     }
   ],
   
   "sessions": [
     {
       "title": "PROTOCOLLEGE Drop-In Hours",
-      "date": "2026-01-23",
-      "time": "10:30 - 17:00 UTC",
-      "topic": "Drop In to Discuss Protocol-related Projects",
+      "date": "2026-01-30",
+      "time": "10:00 - 14:00 UTC",
+      "topic": "Drop In to Co-work and Discuss",
+      "pass": "Password: breakdown",
       "link": "https://meet.example.com/session1",
       "status": "upcoming"
     },
