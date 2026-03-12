@@ -6,11 +6,10 @@
   "readingGroups": [
     {
       "title": "RG Biweekly",
-      "date": "2026-02-02",
+      "date": "2026-03-25",
       "time": "15:30 UTC",
       "duration": "77 minutes",
-      "topic": "'Institutional Ecology, Tranlations & Boundary Objects'",
-      "authors": "S.L. Star & James R. Griesemer",
+      "topic": "On Standardization",
       "link": "https://meet.example.com/room1",
       "status": "upcoming"
     }
@@ -24,7 +23,7 @@
       "topic": "Drop In to Co-work and Discuss",
       "pass": "Password: breakdown",
       "link": "https://meet.example.com/session1",
-      "status": "upcoming"
+      "status": "TBC"
     },
     {
       "title": "New Year Retro",
