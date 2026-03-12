@@ -35,8 +35,14 @@ The Protocollege is a loose asseblage of unruly researchers, interested in the p
 {% endif %}
 {% endfor %}
 
-**[JOIN US HERE!](https://tum-conf.zoom-x.de/j/63725445133?pwd=LIJsIR2TiLQocqhsxa3lPXjq9Z7gxS.1)**
+**[JOIN SESSION HERE](https://tum-conf.zoom-x.de/j/63725445133?pwd=LIJsIR2TiLQocqhsxa3lPXjq9Z7gxS.1)**
+pass: breakdown
+
 
 ## Get Involved
+
+[Join Our Chat](https://chat.whatsapp.com/IgEjOitPo6b28zHJ87bRlT)
+
+OR
 
 {% contribute "Contribute on GitHub", "pr" %}
