@@ -3,7 +3,10 @@ layout: landing
 title: The Protocollege
 description: Generating proto-knowledge through proto-collage
 ---
-The Protocollege is a loose asseblage of unruly researchers, interested in the philosophy and ethics of protocols. We combine protocols, case studies, and collaborative practices to build shared understanding of protocolization as a phenomenon.
+
+**THE PROTOCOLLEGE** is a loose international assemblage of unruly researchers, coalescing around the study of protocols. 
+
+We combine *readings, case studies* and *collaborative practices* to build shared understanding of protocolization _as a phenomenon_ and establish an empirically-based **Philosophy of Protocols**.
 
 ## Explore
 
