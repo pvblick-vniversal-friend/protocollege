@@ -23,8 +23,9 @@ We combine *readings, case studies* and *collaborative practices* to build share
 {% if group.status == "upcoming" %}
 **{{ group.title }}**
 {{ group.date }} at {{ group.time }}
-{{ group.topic }}
-{{ group.authors }}
+**Readings**:
+a. {{ group.author1 }}
+b. {{ group.author2 }}
 {% endif %}
 {% endfor %}
 

@@ -6,11 +6,12 @@
   "readingGroups": [
     {
       "title": "RG Biweekly",
-      "date": "2026-03-25",
+      "date": "2026-04-15",
       "time": "15:45 UTC",
       "duration": "77 minutes",
       "topic": "Algorithms & Distributed Networks",
-      "authors": "Brekke et al., Galloway 'Protocol' Ch. 1",
+      "author1": "Brekke et al. (2021) 'The Dissensus Protocol'",
+      "author2": "Galloway (2006) 'Protocol'",
       "link": "https://ucph-ku.zoom.us/j/68514109036?pwd=Z106s2QI4Tl5LVlVuqKhU6OXGwUENY.1",
       "status": "upcoming"
     }
