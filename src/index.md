@@ -10,7 +10,7 @@ We combine *readings, case studies* and *collaborative practices* to build share
 
 ## Explore
 
-- **[Protocollage](/protocollage/)** - Browse our assemblage of case studies and protocols 
+- **[Protocollage](/protocollage/)** - Empirical case studies & bespoke protocols 
 - **[Activities](/activities/)** - Community projects and initiatives
 - **[Blog](/blog/)** - Latest updates and reflections
 - **[About](/about/)** - Learn more about the project
@@ -18,6 +18,11 @@ We combine *readings, case studies* and *collaborative practices* to build share
 ---
 
 ## Upcoming Events
+
+No online meetups this week, 
+Some of us are at [FOR26](https://opensciencestudies.eu/for-2026-conference/)!
+**Munich Meetup** this week!
+(exact day TBA)
 
 {% for group in schedule.readingGroups %}
 {% if group.status == "upcoming" %}
@@ -38,9 +43,6 @@ b. {{ group.author2 }}
 {{ group.pass }}
 {% endif %}
 {% endfor %}
-
-**[JOIN SESSION HERE](https://ucph-ku.zoom.us/j/68514109036?pwd=Z106s2QI4Tl5LVlVuqKhU6OXGwUENY.1)**
-pass: 082179
 
 
 ## Get Involved

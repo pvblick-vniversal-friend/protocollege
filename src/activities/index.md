@@ -4,6 +4,8 @@ title: Activities
 description: Community projects and initiatives
 ---
 
+![](/assets/images/djam_standards_nate.png "The consequences of a usual protocol djam"){ .small-img .img-card .img-hover-zoom }
+
 {% for activity in activities.activities %}
 {% if activity.status == "active" %}
 ### [{{ activity.title }}]({{ activity.link }})

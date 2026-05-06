@@ -1,8 +1,10 @@
 ---
 layout: regular
-title: About
+title: 
 description: Learn more about Protocollege
 ---
+
+![Group photo of Protocollege members at the ISHPSSB 2025 Conference in Porto](/assets/images/porto.jpg){ .small-img .img-card .img-hover-zoom }
 
 Protocollege is a community-driven platform for generating proto-knowledge through proto-collage.
 

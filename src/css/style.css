@@ -5,6 +5,7 @@
     --color-primary-dark: #004499;
     --color-text: #333;
     --color-text-light: hsl(0, 0%, 40%);
+    --color-logo: linear-gradient(to right,#ffa60f,#333);
     --color-bg: #ffffff;
     --color-bg-alt: #fff3d9;
     --color-border: #e0e0e0;
@@ -52,13 +53,13 @@ body {
 
 .site-logo {
     text-decoration: none;
-    color: var(--color-text);
+    color: var(--color-logo);
 }
 
 .site-logo h1 {
     margin: 0;
     font-size: 1.5rem;
-    font-weight: 600;
+    font-weight: 600; 
 }
 
 .main-nav {
@@ -117,6 +118,49 @@ body {
     color: var(--color-text-light);
     margin-bottom: calc(var(--spacing-unit) * 2);
 }
+
+
+/* Base image utility */
+
+.img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+ .small-img {
+    max-width: 500px;
+    width: 100%;
+    height: auto;
+  }
+  
+  .img-rounded {
+    border-radius: 12px;
+  }
+ 
+  .img-border {
+    border: 2px solid #ccc;
+  }
+  
+  .img-shadow {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+  }
+
+  .img-card {
+    border-radius: 12px;
+    border: 1px solid #ddd;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+    overflow: hidden;
+  }
+
+  .img-hover-zoom {
+    transition: transform 0.20s ease, box-shadow 0.30s ease;
+  }
+  .img-hover-zoom:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 24px rgba(0,0,0,0.18);
+  }
+
 
 /* Blog */
 .blog-post {
