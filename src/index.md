@@ -19,10 +19,9 @@ We combine *readings, case studies* and *collaborative practices* to build share
 
 ## Upcoming Events
 
-No online meetups this week, 
-Some of us are at [FOR26](https://opensciencestudies.eu/for-2026-conference/)!
-**Munich Meetup** this week!
-(exact day TBA)
+ONE YEAR OF PROTOCOLLEGE Anniversary
+Activities: Mapping Intersecting Interests & Celebrating!
+Date: June 23rd
 
 {% for group in schedule.readingGroups %}
 {% if group.status == "upcoming" %}
