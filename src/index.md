@@ -19,9 +19,11 @@ We combine *readings, case studies* and *collaborative practices* to build share
 
 ## Upcoming Events
 
-ONE YEAR OF PROTOCOLLEGE Anniversary
-Activities: Mapping Intersecting Interests & Celebrating!
-Date: June 23rd
+TBA Summer Schedule
+a) Reading Groups
+b) Citation Protocols Working Group
+c) Protocol Symposium Collab Session
+
 
 {% for group in schedule.readingGroups %}
 {% if group.status == "upcoming" %}
