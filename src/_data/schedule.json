@@ -1,19 +1,22 @@
 {
   "Zoom": [
-   { "link": "https://ucph-ku.zoom.us/j/68514109036?pwd=Z106s2QI4Tl5LVlVuqKhU6OXGwUENY.1" }
+   { 
+    "link": "https://ucph-ku.zoom.us/j/9667908137?pwd=Umvk7pdiuDEnmsNJxcTX3FkxMCHQ0C.1&omn=69751443420",
+    "pass": "Password: 903723"}
   ],
 
   "readingGroups": [
     {
       "title": "RG Biweekly",
-      "date": "2026-04-15",
-      "time": "15:45 UTC",
+      "date": "Friday 25 September",
+      "time": "16:45 (UTC+1)",
       "duration": "77 minutes",
-      "topic": "Algorithms & Distributed Networks",
-      "author1": "Brekke et al. (2021) 'The Dissensus Protocol'",
-      "author2": "Galloway (2006) 'Protocol'",
-      "link": " https://ucph-ku.zoom.us/j/63897888372?pwd=eRa3YEVmEtevatvRd99YQnjmd2tKzs.1",
-      "status": "TBC"
+      "topic": "Process-Sensitive Naming & Plant Data Semantics",
+      "author1": "[Leonelli (2022) 'Process-Sensitive Naming: Trait Descriptors and the Shifting Semantics of Plant Data Science'](https://www.researchgate.net/publication/364634702_Process-Sensitive_Naming_Trait_Descriptors_and_the_Shifting_Semantics_of_Plant_Data_Science)",
+      "author2": "",
+      "link": "https://ucph-ku.zoom.us/j/9667908137?pwd=Umvk7pdiuDEnmsNJxcTX3FkxMCHQ0C.1&omn=69751443420",
+      "pass": "Password: 903723",
+      "status": "upcoming"
     }
   ],
   
@@ -37,5 +40,3 @@
     }
   ]
 }
-
-

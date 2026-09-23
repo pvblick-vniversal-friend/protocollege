@@ -19,19 +19,15 @@ We combine *readings, case studies* and *collaborative practices* to build share
 
 ## Upcoming Events
 
-TBA Summer Schedule
-a) Reading Groups
-b) Citation Protocols Working Group
-c) Protocol Symposium Collab Session
-
-
 {% for group in schedule.readingGroups %}
 {% if group.status == "upcoming" %}
 **{{ group.title }}**
 {{ group.date }} at {{ group.time }}
-**Readings**:
-a. {{ group.author1 }}
-b. {{ group.author2 }}
+**Reading**:
+{{ group.author1 }}
+
+**[JOIN SESSION HERE]({{ group.link }})**
+{{ group.pass }}
 {% endif %}
 {% endfor %}
 
