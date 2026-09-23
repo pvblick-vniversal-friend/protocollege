@@ -2,7 +2,8 @@
   "Zoom": [
    { 
     "link": "https://ucph-ku.zoom.us/j/9667908137?pwd=Umvk7pdiuDEnmsNJxcTX3FkxMCHQ0C.1&omn=69751443420",
-    "pass": "Password: 903723"}
+    "pass": "Password: 903723"
+   }
   ],
 
   "readingGroups": [
@@ -11,10 +12,12 @@
       "date": "Friday 25 September",
       "time": "16:45 (UTC+1)",
       "duration": "77 minutes",
-      "topic": "Process-Sensitive Naming & Plant Data Semantics",
-      "author1": "[Leonelli (2022) 'Process-Sensitive Naming: Trait Descriptors and the Shifting Semantics of Plant Data Science'](https://www.researchgate.net/publication/364634702_Process-Sensitive_Naming_Trait_Descriptors_and_the_Shifting_Semantics_of_Plant_Data_Science)",
-      "author2": "",
-      "link": "https://ucph-ku.zoom.us/j/9667908137?pwd=Umvk7pdiuDEnmsNJxcTX3FkxMCHQ0C.1&omn=69751443420",
+      "topic": "Naming Standards & Categorization in Plant Semantics",
+      "guest": "Sabina Leonelli",
+      "author1": "Leonelli (2022)",
+      "readingTitle": "Process-Sensitive Naming: Trait Descriptors and the Shifting Semantics of Plant Data Science",
+      "link": "https://www.researchgate.net/publication/364634702_Process-Sensitive_Naming_Trait_Descriptors_and_the_Shifting_Semantics_of_Plant_Data_Science",
+      "zoom": "https://ucph-ku.zoom.us/j/9667908137?pwd=Umvk7pdiuDEnmsNJxcTX3FkxMCHQ0C.1&omn=69751443420",
       "pass": "Password: 903723",
       "status": "upcoming"
     }

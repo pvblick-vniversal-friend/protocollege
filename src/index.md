@@ -8,12 +8,9 @@ description: Generating proto-knowledge through proto-collage
 
 We combine *readings, case studies* and *collaborative practices* to build shared understanding of protocolization _as a phenomenon_ and establish an empirically-based **Philosophy of Protocols**.
 
-## Explore
+---
 
-- **[Protocollage](/protocollage/)** - Empirical case studies & bespoke protocols 
-- **[Activities](/activities/)** - Community projects and initiatives
-- **[Blog](/blog/)** - Latest updates and reflections
-- **[About](/about/)** - Learn more about the project
+All recorded sessions are now on [Internet Archive](https://archive.org/details/@the_protocollege)!
 
 ---
 
@@ -21,12 +18,14 @@ We combine *readings, case studies* and *collaborative practices* to build share
 
 {% for group in schedule.readingGroups %}
 {% if group.status == "upcoming" %}
-**{{ group.title }}**
-{{ group.date }} at {{ group.time }}
-**Reading**:
-{{ group.author1 }}
+**{{ group.topic }}**
+{% if group.guest %}with {{ group.guest }}{% endif %}
+{{ group.date }} at **{{ group.time }}**
 
-**[JOIN SESSION HERE]({{ group.link }})**
+**Reading**
+**[{{ group.author1 }}]({{ group.link }})**
+
+**[JOIN SESSION HERE]({{ group.zoom }})**
 {{ group.pass }}
 {% endif %}
 {% endfor %}
