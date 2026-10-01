@@ -10,35 +10,18 @@ We combine *readings, case studies* and *collaborative practices* to build share
 
 ---
 
-All recorded sessions are now on [Internet Archive](https://archive.org/details/@the_protocollege)!
-
----
 
 ## Upcoming Events
 
-{% for group in schedule.readingGroups %}
-{% if group.status == "upcoming" %}
-**{{ group.topic }}**
-{% if group.guest %}with {{ group.guest }}{% endif %}
-{{ group.date }} at **{{ group.time }}**
+{% from "components/events.njk" import eventList -%}
+{% set upcoming = schedule.events | upcomingEvents -%}
+{% if upcoming.length -%}
+{{ eventList(upcoming.slice(0, 2), compact=true) }}
 
-**Reading**
-**[{{ group.author1 }}]({{ group.link }})**
-
-**[JOIN SESSION HERE]({{ group.zoom }})**
-{{ group.pass }}
-{% endif %}
-{% endfor %}
-
-
-{% for group in schedule.sessions %}
-{% if group.status == "upcoming" %}
-**{{ group.title }}**
-{{ group.date }} at {{ group.time }}
-{{ group.topic }}
-{{ group.pass }}
-{% endif %}
-{% endfor %}
+[All events →](/events/)
+{%- else -%}
+Nothing is scheduled right now. See past all past sessions on [Internet Archive](https://archive.org/details/@the_protocollege)!
+{%- endif %}
 
 
 ## Get Involved

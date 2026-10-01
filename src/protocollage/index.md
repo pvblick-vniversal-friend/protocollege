@@ -6,6 +6,8 @@ description: Collection of protocols and case studies
 
 A collection of protocols and case studies from the Protocollege community.
 
+![](/assets/images/djam_standards_nate.png "The consequences of a usual protocol djam"){ .small-img .img-card .img-hover-zoom }
+
 ## Protocols
 
 <div class="protocollage-gallery protocol-gallery">

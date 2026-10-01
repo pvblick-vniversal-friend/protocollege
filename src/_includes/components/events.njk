@@ -1,0 +1,48 @@
+{# Event cards, shared by the landing page preview and /events/.
+   Rendered inside markdown, so the output must stay free of blank lines:
+   markdown-it only passes it through untouched as a single HTML block. #}
+{%- set typeLabels = {
+  "reading-group": "Reading group",
+  "working-group": "Working group",
+  "session": "Session",
+  "other": "Event"
+} -%}
+{%- macro eventList(events, compact=false, showJoin=true) -%}
+<ul class="event-list{% if compact %} event-list-compact{% endif %}">
+{%- for event in events %}
+<li class="event{% if event.status == 'cancelled' %} event-cancelled{% endif %}">
+<span class="tag">{{ typeLabels[event.type] or "Event" }}</span>
+{%- if event.status == "tbc" %} <span class="tag tag-muted">To be confirmed</span>{% endif %}
+{%- if event.status == "cancelled" %} <span class="tag tag-muted">Cancelled</span>{% endif %}
+<h3 class="event-title">{{ event.title }}</h3>
+{%- if event.guest %}
+<p class="event-guest">with {{ event.guest }}</p>
+{%- endif %}
+<p class="event-when"><time datetime="{{ event.date }}{% if event.time %}T{{ event.time }}{% endif %}">{{ event | eventWhen }}</time></p>
+{%- if event.topic %}
+<p class="event-topic">{{ event.topic }}</p>
+{%- endif %}
+{%- if not compact and event.readings and event.readings.length %}
+<p class="event-label">Reading</p>
+<ul class="event-readings">
+{%- for reading in event.readings %}
+<li>
+{%- if reading.link %}<a href="{{ reading.link }}" target="_blank" rel="noopener noreferrer">{{ reading.author }}{% if reading.title %} — {{ reading.title }}{% endif %}</a>
+{%- else %}{{ reading.author }}{% if reading.title %} — {{ reading.title }}{% endif %}
+{%- endif %}
+</li>
+{%- endfor %}
+</ul>
+{%- endif %}
+{%- if event.status != "cancelled" %}
+{%- if showJoin and event.join %}
+<p><a class="event-join" href="{{ event.join }}" target="_blank" rel="noopener noreferrer">Join session</a></p>
+{%- endif %}
+{%- if not compact and event.pass %}
+<p class="event-pass">{{ event.pass }}</p>
+{%- endif %}
+{%- endif %}
+</li>
+{%- endfor %}
+</ul>
+{%- endmacro -%}
