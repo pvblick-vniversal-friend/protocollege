@@ -49,6 +49,30 @@ module.exports = function(eleventyConfig) {
     });
   });
 
+  // Events from src/_data/schedule.json. Upcoming = today (UTC) or later,
+  // soonest first; past = before today, most recent first.
+  const byDateTime = (a, b) => `${a.date} ${a.time}`.localeCompare(`${b.date} ${b.time}`);
+
+  eleventyConfig.addFilter("upcomingEvents", (events = []) => {
+    const today = DateTime.utc().toISODate();
+    return events.filter(event => event.date >= today).sort(byDateTime);
+  });
+
+  eleventyConfig.addFilter("pastEvents", (events = []) => {
+    const today = DateTime.utc().toISODate();
+    return events.filter(event => event.date < today).sort((a, b) => byDateTime(b, a));
+  });
+
+  // "Fri 25 Sep 2026 · 16:45–18:02 (UTC+1)"
+  eleventyConfig.addFilter("eventWhen", (event) => {
+    const start = DateTime.fromISO(`${event.date}T${event.time || "00:00"}`, { zone: "utc" });
+    const day = start.toFormat("ccc d LLL yyyy");
+    if (!event.time) return day;
+    let when = `${day} · ${start.toFormat("HH:mm")}`;
+    if (event.duration) when += `–${start.plus({ minutes: event.duration }).toFormat("HH:mm")}`;
+    return `${when} (${event.timezone || "UTC"})`;
+  });
+
   // Collections
   eleventyConfig.addCollection("blog", function(collectionApi) {
     return collectionApi.getFilteredByGlob("src/blog/posts/*.md").sort((a, b) => {

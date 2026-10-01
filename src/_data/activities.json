@@ -1,12 +1,111 @@
 {
-  "activities": [
+  "sessions": [
+    {
+      "title": "Reading Groups",
+      "short": "RGs",
+      "description": "Biweekly discussions of protocol literature. Each session takes one or two readings from the library and works through them together, usually with a guest.",
+      "recordings": "rg",
+      "tags": [
+        "biweekly",
+        "reading"
+      ]
+    },
+    {
+      "title": "Diagram Jams",
+      "short": "DJams",
+      "description": "Collaborative diagramming sessions: drawing research processes together, and arguing about how to represent agents, objects and the knowledge moving between them.",
+      "recordings": "djam",
+      "tags": [
+        "diagramming",
+        "collective"
+      ]
+    },
+    {
+      "title": "Protocol Literature Collection",
+      "description": "Our shared reading list, kept as a public Zotero group: protocol practice across domains, from the life sciences and biomedicine to distributed networks and indigenous rights.",
+      "link": "/library/",
+      "linkText": "Browse the library",
+      "tags": [
+        "library",
+        "open to all"
+      ]
+    }
+  ],
+  "projects": [
     {
       "title": "Protocollage",
-      "description": "Using ethnographic fieldwowrk artifacts as raw material for assembling together heterogeneous case studies",
-      "link": "/protocollage",
-      "status": "active",
-      "tags": ["peer-production", "protocollaboration"]
+      "status": "ongoing",
+      "description": "Assembling heterogeneous case studies out of ethnographic fieldwork artifacts. Next step: logging case studies directly on this site, from a template built on the metadata schema we maintain.",
+      "link": "/protocollage/protocol_metadata/",
+      "linkText": "Metadata schema (draft)",
+      "tags": [
+        "peer-production",
+        "protocollaboration"
+      ]
+    },
+    {
+      "title": "Conference Crashing",
+      "status": "ongoing",
+      "description": "Members turn up at symposia and conference sessions, alone or in groups, to bring protocol questions into other fields' rooms.",
+      "note": "Next outing to be announced.",
+      "link": "https://app.oxfordabstracts.com/events/73530/sessions/153822/download",
+      "linkText": "A recent session",
+      "tags": [
+        "symposia",
+        "in the wild"
+      ]
+    },
+    {
+      "title": "SIG: Standardization & Variability",
+      "status": "forming",
+      "description": "A special interest group on standardization in the sciences, mostly the empirical and experimental ones: how standards hold together, and what varies underneath them anyway.",
+      "tags": [
+        "sig"
+      ],
+      "interest": true
+    },
+    {
+      "title": "SIG: Protocol Theory",
+      "status": "forming",
+      "description": "A special interest group working towards an empirically-based philosophy of protocols.",
+      "tags": [
+        "sig"
+      ],
+      "interest": true
+    },
+    {
+      "title": "SIG: Ethnography of the “Boring”",
+      "status": "forming",
+      "description": "Taking up Susan Leigh Star's provocation to study boring things, and working out the methods for it — somewhere between archival and documentary research and ethnomethodology.",
+      "interest": true,
+      "tags": [
+        "sig",
+        "methods"
+      ]
+    },
+    {
+      "title": "SIG: The Procedural Mind",
+      "status": "forming",
+      "description": "Where the micro-sociology of practice meets cognitive science and psychology: what following a procedure does to, and asks of, a mind.",
+      "interest": true,
+      "tags": [
+        "sig",
+        "cognition"
+      ]
+    }
+  ],
+  "potentials": [
+    {
+      "title": "Citation Protocols Working Group",
+      "description": "Working out how the collective cites, pins and credits the things it reads and makes."
+    },
+    {
+      "title": "Protocol Symposium Collaboration",
+      "description": "Co-hosting a symposium with an allied group, rather than only crashing other people's."
+    },
+    {
+      "title": "Self-hosted sessions and recordings",
+      "description": "Running our own video and archive, so sessions do not depend on anyone's institutional account."
     }
   ]
 }
-

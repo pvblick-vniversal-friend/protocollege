@@ -1,0 +1,126 @@
+{
+  "fetched": "2026-10-01T03:41:09.209Z",
+  "recordings": [
+    {
+      "identifier": "protocollege-13",
+      "title": "PROTOCOLLEGE #13 | Anniversary",
+      "label": "#13",
+      "kind": "other",
+      "date": "2026-05-29",
+      "dateLabel": "29 May 2026",
+      "summary": "Anniversary Session",
+      "url": "https://archive.org/details/protocollege-13",
+      "embedUrl": "https://archive.org/embed/protocollege-13"
+    },
+    {
+      "identifier": "protocollege-12",
+      "title": "PROTOCOLLEGE #12 | RG",
+      "label": "#12",
+      "kind": "rg",
+      "date": "2026-04-15",
+      "dateLabel": "15 Apr 2026",
+      "summary": "Discussion on Algorithmic Protocols Readings : Brekke, Jaya Klara, Kate Beecroft, and Francesca Pick. 2021. “The Dissensus Protocol: Governing Differences in Online Peer…",
+      "url": "https://archive.org/details/protocollege-12",
+      "embedUrl": "https://archive.org/embed/protocollege-12"
+    },
+    {
+      "identifier": "protocollege-8",
+      "title": "PROTOCOLLEGE #8 | RG",
+      "label": "#8",
+      "kind": "rg",
+      "date": "2025-12-17",
+      "dateLabel": "17 Dec 2025",
+      "summary": "The meeting focused on discussing scientific protocols and their implementation across different disciplines, with particular attention to the challenges of reproducibility and…",
+      "url": "https://archive.org/details/protocollege-8",
+      "embedUrl": "https://archive.org/embed/protocollege-8"
+    },
+    {
+      "identifier": "protocollege-7",
+      "title": "PROTOCOLLEGE #7 | Retrospective",
+      "label": "#7",
+      "kind": "other",
+      "date": "2025-12-03",
+      "dateLabel": "3 Dec 2025",
+      "summary": "A retrospective of 2025. Protocollage Project",
+      "url": "https://archive.org/details/protocollege-7",
+      "embedUrl": "https://archive.org/embed/protocollege-7"
+    },
+    {
+      "identifier": "protocollege-6",
+      "title": "PROTOCOLLEGE #6 | RG",
+      "label": "#6",
+      "kind": "rg",
+      "date": "2025-11-05",
+      "dateLabel": "5 Nov 2025",
+      "summary": "The group explored the trade-offs between flexible and rigid scientific protocols (examples from citizen science), discussing how different types of knowledge and creativity can…",
+      "url": "https://archive.org/details/protocollege-6",
+      "embedUrl": "https://archive.org/embed/protocollege-6"
+    },
+    {
+      "identifier": "protocollege-5",
+      "title": "PROTOCOLLEGE #5 | DJam",
+      "label": "#5",
+      "kind": "djam",
+      "date": "2025-10-22",
+      "dateLabel": "22 Oct 2025",
+      "summary": "The conversation focused on extensive discussions about diagramming research processes, including the representation of agents, objects, and knowledge components, along with…",
+      "url": "https://archive.org/details/protocollege-5",
+      "embedUrl": "https://archive.org/embed/protocollege-5"
+    },
+    {
+      "identifier": "protocollege-4",
+      "title": "PROTOCOLLEGE #4 | DJam",
+      "label": "#4",
+      "kind": "djam",
+      "date": "2025-10-08",
+      "dateLabel": "8 Oct 2025",
+      "summary": "The group discussed Protocol Edge project activities and updates, including Protocol Reader documents and Protocol School recordings. They explored various aspects of protocol…",
+      "url": "https://archive.org/details/protocollege-4",
+      "embedUrl": "https://archive.org/embed/protocollege-4"
+    },
+    {
+      "identifier": "protocollege-3",
+      "title": "PROTOCOLLEGE #3",
+      "label": "#3",
+      "kind": "other",
+      "date": "2025-09-10",
+      "dateLabel": "10 Sept 2025",
+      "summary": "Fotis, Yoshi and Federica explored various aspects of protocols, including their role in scientific research, flexibility versus standardization, and the concept of…",
+      "url": "https://archive.org/details/protocollege-3",
+      "embedUrl": "https://archive.org/embed/protocollege-3"
+    },
+    {
+      "identifier": "protocollege-2",
+      "title": "Protocollege #2 | RG",
+      "label": "#2",
+      "kind": "rg",
+      "date": "2025-07-02",
+      "dateLabel": "2 Jul 2025",
+      "summary": "The group discussed protocols in various contexts, focusing on their importance in science, technology, and philosophy, while exploring different typologies and functions. They…",
+      "url": "https://archive.org/details/protocollege-2",
+      "embedUrl": "https://archive.org/embed/protocollege-2"
+    },
+    {
+      "identifier": "protocollege-1-18-06-25",
+      "title": "PROTOCOLLEGE #1",
+      "label": "#1",
+      "kind": "other",
+      "date": "2025-06-18",
+      "dateLabel": "18 Jun 2025",
+      "summary": "The meeting began with participants introducing their backgrounds in various scientific fields, including open science, marine science, and computer science. The group then…",
+      "url": "https://archive.org/details/protocollege-1-18-06-25",
+      "embedUrl": "https://archive.org/embed/protocollege-1-18-06-25"
+    },
+    {
+      "identifier": "protocollege-0",
+      "title": "Protocollege #0",
+      "label": "#0",
+      "kind": "other",
+      "date": null,
+      "dateLabel": null,
+      "summary": "The first meeting of The PROTOCOLLEGE special interest group. We talked about our diverging views on protocols, common interests and a first attempt at setting up the problem…",
+      "url": "https://archive.org/details/protocollege-0",
+      "embedUrl": "https://archive.org/embed/protocollege-0"
+    }
+  ]
+}

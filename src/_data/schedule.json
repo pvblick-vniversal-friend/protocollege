@@ -1,45 +1,53 @@
 {
   "Zoom": [
-   { 
+   {
     "link": "https://ucph-ku.zoom.us/j/9667908137?pwd=Umvk7pdiuDEnmsNJxcTX3FkxMCHQ0C.1&omn=69751443420",
     "pass": "Password: 903723"
    }
   ],
 
-  "readingGroups": [
+  "events": [
     {
+      "type": "reading-group",
       "title": "RG Biweekly",
-      "date": "Friday 25 September",
-      "time": "16:45 (UTC+1)",
-      "duration": "77 minutes",
+      "date": "2026-09-25",
+      "time": "16:45",
+      "timezone": "UTC+1",
+      "duration": 77,
       "topic": "Naming Standards & Categorization in Plant Semantics",
       "guest": "Sabina Leonelli",
-      "author1": "Leonelli (2022)",
-      "readingTitle": "Process-Sensitive Naming: Trait Descriptors and the Shifting Semantics of Plant Data Science",
-      "link": "https://www.researchgate.net/publication/364634702_Process-Sensitive_Naming_Trait_Descriptors_and_the_Shifting_Semantics_of_Plant_Data_Science",
-      "zoom": "https://ucph-ku.zoom.us/j/9667908137?pwd=Umvk7pdiuDEnmsNJxcTX3FkxMCHQ0C.1&omn=69751443420",
+      "readings": [
+        {
+          "author": "Leonelli (2022)",
+          "title": "Process-Sensitive Naming: Trait Descriptors and the Shifting Semantics of Plant Data Science",
+          "link": "https://www.researchgate.net/publication/364634702_Process-Sensitive_Naming_Trait_Descriptors_and_the_Shifting_Semantics_of_Plant_Data_Science"
+        }
+      ],
+      "join": "https://ucph-ku.zoom.us/j/9667908137?pwd=Umvk7pdiuDEnmsNJxcTX3FkxMCHQ0C.1&omn=69751443420",
       "pass": "Password: 903723",
-      "status": "upcoming"
-    }
-  ],
-  
-  "sessions": [
-    {
-      "title": "PROTOCOLLEGE Drop-In Hours",
-      "date": "2026-01-30",
-      "time": "10:00 - 14:00 UTC",
-      "topic": "Drop In to Co-work and Discuss",
-      "pass": "Password: breakdown",
-      "link": "https://meet.example.com/session1",
-      "status": "TBC"
+      "status": "confirmed"
     },
     {
+      "type": "session",
+      "title": "PROTOCOLLEGE Drop-In Hours",
+      "date": "2026-01-30",
+      "time": "10:00",
+      "timezone": "UTC",
+      "duration": 240,
+      "topic": "Drop In to Co-work and Discuss",
+      "join": "https://meet.example.com/session1",
+      "pass": "Password: breakdown",
+      "status": "tbc"
+    },
+    {
+      "type": "session",
       "title": "New Year Retro",
       "date": "2026-01-21",
-      "time": "15:45 UTC",
+      "time": "15:45",
+      "timezone": "UTC",
       "topic": "Projects & Grants",
-      "link": "https://meet.example.com/session1",
-      "status": "TBC"
+      "join": "https://meet.example.com/session1",
+      "status": "tbc"
     }
   ]
 }
