@@ -83,6 +83,10 @@ async function fetchRecordings() {
 
 function saveSnapshot(recordings) {
   try {
+    // Only rewrite when the content itself changed, so a rebuild does not dirty
+    // the working tree with nothing but a new timestamp.
+    const current = readSnapshot();
+    if (current && JSON.stringify(current) === JSON.stringify(recordings)) return;
     fs.mkdirSync(path.dirname(SNAPSHOT), { recursive: true });
     fs.writeFileSync(
       SNAPSHOT,

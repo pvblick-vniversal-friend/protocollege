@@ -117,6 +117,10 @@ function groupByYear(items) {
 
 function saveSnapshot(items) {
   try {
+    // Only rewrite when the content itself changed, so a rebuild does not dirty
+    // the working tree with nothing but a new timestamp.
+    const current = readSnapshot();
+    if (current && JSON.stringify(current) === JSON.stringify(items)) return;
     fs.mkdirSync(path.dirname(SNAPSHOT), { recursive: true });
     fs.writeFileSync(SNAPSHOT, JSON.stringify({ fetched: new Date().toISOString(), items }, null, 2) + "\n");
   } catch (error) {
