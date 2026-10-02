@@ -1,0 +1,86 @@
+# Publishes events submitted through the "New event" issue form
+# (.github/ISSUE_TEMPLATE/new-event.yml) to src/_data/schedule.json.
+# Vercel rebuilds proto.college on the resulting push to main.
+name: Add event from issue
+
+on:
+  issues:
+    types: [opened, edited, reopened]
+
+permissions:
+  contents: write
+  issues: write
+
+# One schedule update at a time, so two submissions can't overwrite each other.
+concurrency:
+  group: schedule-update
+  cancel-in-progress: false
+
+jobs:
+  add-event:
+    if: >-
+      startsWith(github.event.issue.title, '[Event]') &&
+      github.event.issue.state == 'open' &&
+      contains(fromJSON('["OWNER", "MEMBER", "COLLABORATOR"]'), github.event.issue.author_association)
+    runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ github.token }}
+      ISSUE_NUMBER: ${{ github.event.issue.number }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Update schedule.json from the form
+        id: update
+        env:
+          # Passed through the environment, never interpolated into the script.
+          ISSUE_BODY: ${{ github.event.issue.body }}
+        run: node scripts/add-event-from-issue.js
+
+      - name: Commit and push
+        if: steps.update.outputs.changed == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add src/_data/schedule.json
+          git commit -F "$RUNNER_TEMP/event-commit-message.txt"
+          git pull --rebase
+          git push
+
+      - name: Report back and close the issue
+        run: |
+          gh issue comment "$ISSUE_NUMBER" --repo "$GITHUB_REPOSITORY" --body-file "$RUNNER_TEMP/event-comment.md"
+          gh issue close "$ISSUE_NUMBER" --repo "$GITHUB_REPOSITORY"
+
+      - name: Explain what went wrong
+        if: failure()
+        env:
+          FORM_INVALID: ${{ steps.update.outcome == 'failure' }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          if [ "$FORM_INVALID" = "true" ] && [ -f "$RUNNER_TEMP/event-comment.md" ]; then
+            gh issue comment "$ISSUE_NUMBER" --repo "$GITHUB_REPOSITORY" --body-file "$RUNNER_TEMP/event-comment.md"
+          else
+            gh issue comment "$ISSUE_NUMBER" --repo "$GITHUB_REPOSITORY" \
+              --body "Something went wrong while publishing this event. Details: $RUN_URL"
+          fi
+
+  not-a-maintainer:
+    if: >-
+      github.event.action == 'opened' &&
+      startsWith(github.event.issue.title, '[Event]') &&
+      !contains(fromJSON('["OWNER", "MEMBER", "COLLABORATOR"]'), github.event.issue.author_association)
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+    env:
+      GH_TOKEN: ${{ github.token }}
+      ISSUE_NUMBER: ${{ github.event.issue.number }}
+    steps:
+      - name: Leave the request for a maintainer
+        run: |
+          gh issue comment "$ISSUE_NUMBER" --repo "$GITHUB_REPOSITORY" \
+            --body "Thanks for proposing this event! Only maintainers can publish events directly, so a maintainer will review it and resubmit it if it fits the schedule."

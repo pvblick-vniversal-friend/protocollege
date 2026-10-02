@@ -22,6 +22,9 @@ description: The sessions we run, the projects we are building, and what might c
 {%- for recording in recordings.slice(0, 3) %} <a href="{{ recording.url }}" target="_blank" rel="noopener noreferrer">{{ recording.label }}</a><span class="activity-date"> {{ recording.dateLabel }}</span>{% if not loop.last %} · {% endif %}{% endfor %}
 </p>
 {%- endif %}
+{%- if session.artifacts %}
+<p class="activity-artifacts">{% for artifact in session.artifacts %}<a href="{{ artifact.url }}" target="_blank" rel="noopener noreferrer">{{ artifact.title }}</a>{% if not loop.last %} · {% endif %}{% endfor %}</p>
+{%- endif %}
 {%- if session.tags %}
 <p class="activity-tags">{% for tag in session.tags %}<span class="tag">{{ tag }}</span> {% endfor %}</p>
 {%- endif %}

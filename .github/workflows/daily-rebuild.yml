@@ -1,0 +1,27 @@
+# Rebuilds proto.college every night so events drop off "Upcoming Events" the
+# day after they happen, even when nothing new has been pushed.
+#
+# Setup: in Vercel, Project Settings → Git → Deploy Hooks, create a hook for the
+# main branch, then save its URL as the repository secret VERCEL_DEPLOY_HOOK.
+name: Daily rebuild
+
+on:
+  schedule:
+    - cron: "5 0 * * *" # 00:05 UTC
+  workflow_dispatch:
+
+permissions: {}
+
+jobs:
+  rebuild:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger the Vercel deploy hook
+        env:
+          DEPLOY_HOOK: ${{ secrets.VERCEL_DEPLOY_HOOK }}
+        run: |
+          if [ -z "$DEPLOY_HOOK" ]; then
+            echo "::warning::VERCEL_DEPLOY_HOOK is not set, so the site was not rebuilt."
+            exit 0
+          fi
+          curl --fail --silent --show-error --request POST "$DEPLOY_HOOK" > /dev/null

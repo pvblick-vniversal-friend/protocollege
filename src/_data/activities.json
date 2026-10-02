@@ -15,6 +15,12 @@
       "short": "DJams",
       "description": "Collaborative diagramming sessions: drawing research processes together, and arguing about how to represent agents, objects and the knowledge moving between them.",
       "recordings": "djam",
+      "artifacts": [
+        {
+          "title": "Diagram Jam canvas",
+          "url": "https://www.tldraw.com/f/wAsS-IwT2tzRqVGW0dkA3"
+        }
+      ],
       "tags": [
         "diagramming",
         "collective"

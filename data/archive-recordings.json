@@ -1,6 +1,17 @@
 {
-  "fetched": "2026-10-01T03:41:09.209Z",
+  "fetched": "2026-10-02T20:05:06.324Z",
   "recordings": [
+    {
+      "identifier": "protocollege-14",
+      "title": "PROTOCOLLEGE #14 | RG w/ Sabina Leonelli",
+      "label": "#14",
+      "kind": "rg",
+      "date": "2026-09-25",
+      "dateLabel": "25 Sept 2026",
+      "summary": "This session on naming conventions and algorithmic ontologies focused on Sabina Leonelli”s “Process-sensitive Naming Trait Descriptors and the Sfiting Semantics of Plant Data…",
+      "url": "https://archive.org/details/protocollege-14",
+      "embedUrl": "https://archive.org/embed/protocollege-14"
+    },
     {
       "identifier": "protocollege-13",
       "title": "PROTOCOLLEGE #13 | Anniversary",
@@ -25,7 +36,7 @@
     },
     {
       "identifier": "protocollege-8",
-      "title": "PROTOCOLLEGE #8 | RG",
+      "title": "PROTOCOLLEGE #8 | RG w/ Federico Boem",
       "label": "#8",
       "kind": "rg",
       "date": "2025-12-17",
