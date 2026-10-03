@@ -25,16 +25,6 @@
         "diagramming",
         "collective"
       ]
-    },
-    {
-      "title": "Protocol Literature Collection",
-      "description": "Our shared reading list, kept as a public Zotero group: protocol practice across domains, from the life sciences and biomedicine to distributed networks and indigenous rights.",
-      "link": "/library/",
-      "linkText": "Browse the library",
-      "tags": [
-        "library",
-        "open to all"
-      ]
     }
   ],
   "projects": [
@@ -59,6 +49,17 @@
       "tags": [
         "symposia",
         "in the wild"
+      ]
+    },
+    {
+      "title": "Protocol Literature Collection",
+      "status": "ongoing",
+      "description": "Our shared reading list, kept as a public Zotero group: protocol practice across domains, from the life sciences and biomedicine to distributed networks and indigenous rights.",
+      "link": "/library/",
+      "linkText": "Browse the library",
+      "tags": [
+        "library",
+        "open to all"
       ]
     },
     {
