@@ -25,16 +25,6 @@
         "diagramming",
         "collective"
       ]
-    },
-    {
-      "title": "Protocol Literature Collection",
-      "description": "Our shared reading list, kept as a public Zotero group: protocol practice across domains, from the life sciences and biomedicine to distributed networks and indigenous rights.",
-      "link": "/library/",
-      "linkText": "Browse the library",
-      "tags": [
-        "library",
-        "open to all"
-      ]
     }
   ],
   "projects": [
@@ -53,12 +43,23 @@
       "title": "Conference Crashing",
       "status": "ongoing",
       "description": "Members turn up at symposia and conference sessions, alone or in groups, to bring protocol questions into other fields' rooms.",
-      "note": "Next outing to be announced.",
-      "link": "https://app.oxfordabstracts.com/events/73530/sessions/153822/download",
-      "linkText": "Symposium: 'The Life of Protocols in the Life Sciences', ISHPSSB 2025, Porto",
+      "note": "Most recently: Symposium 'The Life of Protocols in the Life Sciences', ISHPSSB 2025, Porto.",
+      "link": "/conference-crashing/",
+      "linkText": "Where we have turned up",
       "tags": [
         "symposia",
         "in the wild"
+      ]
+    },
+    {
+      "title": "Protocol Literature Collection",
+      "status": "ongoing",
+      "description": "Our shared reading list, kept as a public Zotero group: protocol practice across domains, from the life sciences and biomedicine to distributed networks and indigenous rights.",
+      "link": "/library/",
+      "linkText": "Browse the library",
+      "tags": [
+        "library",
+        "open to all"
       ]
     },
     {
@@ -71,7 +72,7 @@
       "interest": true
     },
     {
-      "title": "SIG: Intrgral Protocol Theory",
+      "title": "SIG: Integral Protocol Theory",
       "status": "forming",
       "description": "A special interest group working towards an empirically-based transdisciplinary philosophy of protocolization",
       "tags": [
@@ -97,6 +98,18 @@
       "tags": [
         "sig",
         "cognition"
+      ]
+    },
+    {
+      "title": "Protocol Studies Concept Cartography",
+      "status": "forming",
+      "description": "Mapping the conceptual space of protocol studies: definitions, characterisations, examples and the routes between ideas. Modelled on Concept Cartography, which grew out of a reading group on epistemic diversity and whose cartographers include two Protocollege members.",
+      "link": "https://conceptcartography.github.io/conceptcartography/",
+      "linkText": "Concept Cartography",
+      "interest": true,
+      "tags": [
+        "concepts",
+        "mapping"
       ]
     }
   ],
