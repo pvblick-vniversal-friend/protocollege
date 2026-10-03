@@ -10,6 +10,8 @@ description: The Protocollege reading list, drawing from the public Zotero group
 
 **{{ zotero.count }} references**, APA style, date first.
 
+Add a tag with your name to the items you add to search all your own itesm by tag.
+
 <div id="library-filter"></div>
 
 {%- for group in zotero.byYear %}

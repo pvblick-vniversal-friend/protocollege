@@ -25,6 +25,16 @@
         "diagramming",
         "collective"
       ]
+    },
+    {
+      "title": "Protocol Literature Collection",
+      "description": "Our shared reading list, kept as a public Zotero group: protocol practice across domains, from the life sciences and biomedicine to distributed networks and indigenous rights.",
+      "link": "/library/",
+      "linkText": "Browse the library",
+      "tags": [
+        "library",
+        "open to all"
+      ]
     }
   ],
   "projects": [
@@ -43,38 +53,27 @@
       "title": "Conference Crashing",
       "status": "ongoing",
       "description": "Members turn up at symposia and conference sessions, alone or in groups, to bring protocol questions into other fields' rooms.",
-      "note": "Most recently: ISHPSSB 2025, Symposium on Protocols in Biology.",
-      "link": "/conference-crashing/",
-      "linkText": "Where we have turned up",
+      "note": "Next outing to be announced.",
+      "link": "https://app.oxfordabstracts.com/events/73530/sessions/153822/download",
+      "linkText": "Symposium: 'The Life of Protocols in the Life Sciences', ISHPSSB 2025, Porto",
       "tags": [
         "symposia",
         "in the wild"
       ]
     },
     {
-      "title": "Protocol Literature Collection",
-      "status": "ongoing",
-      "description": "Our shared reading list, kept as a public Zotero group: protocol practice across domains, from the life sciences and biomedicine to distributed networks and indigenous rights.",
-      "link": "/library/",
-      "linkText": "Browse the library",
-      "tags": [
-        "library",
-        "open to all"
-      ]
-    },
-    {
-      "title": "SIG: Standardization & Variability",
+      "title": "SIG: Standardization & Variability in Biosciences",
       "status": "forming",
-      "description": "A special interest group on standardization in the sciences, mostly the empirical and experimental ones: how standards hold together, and what varies underneath them anyway.",
+      "description": "A special interest group on standardization in the scientific practices, mostly the empirical and experimental ones: how standards hold together, and what varies underneath them anyway.",
       "tags": [
         "sig"
       ],
       "interest": true
     },
     {
-      "title": "SIG: Protocol Theory",
+      "title": "SIG: Intrgral Protocol Theory",
       "status": "forming",
-      "description": "A special interest group working towards an empirically-based philosophy of protocols.",
+      "description": "A special interest group working towards an empirically-based transdisciplinary philosophy of protocolization",
       "tags": [
         "sig"
       ],
@@ -98,18 +97,6 @@
       "tags": [
         "sig",
         "cognition"
-      ]
-    },
-    {
-      "title": "Protocol Studies Concept Cartography",
-      "status": "forming",
-      "description": "Mapping the conceptual space of protocol studies: definitions, characterisations, examples and the routes between ideas. Modelled on Concept Cartography, which grew out of a reading group on epistemic diversity and whose cartographers include two Protocollege members.",
-      "link": "https://conceptcartography.github.io/conceptcartography/",
-      "linkText": "Concept Cartography",
-      "interest": true,
-      "tags": [
-        "concepts",
-        "mapping"
       ]
     }
   ],
