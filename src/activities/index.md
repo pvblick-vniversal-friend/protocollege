@@ -1,6 +1,6 @@
 ---
 layout: regular
-title: Activities
+title: Activities & Projects
 description: The sessions we run, the projects we are building, and what might come next
 ---
 
@@ -81,8 +81,11 @@ description: The sessions we run, the projects we are building, and what might c
 {%- if project.tags %}
 <p class="activity-tags">{% for tag in project.tags %}<span class="tag">{{ tag }}</span> {% endfor %}</p>
 {%- endif %}
+{%- if project.link %}
+<p class="activity-more"><a href="{{ project.link }}"{% if project.link.startsWith("http") %} target="_blank" rel="noopener noreferrer"{% endif %}>{{ project.linkText or "More" }} →</a></p>
+{%- endif %}
 {%- if project.interest %}
-<p><a class="btn-interest" href="mailto:protocollege@proton.me?subject={{ ('SIG ' + (project.title | replace('SIG: ', '')) + ' Interest') | urlencode }}">Share your interest</a></p>
+<p><a class="btn-interest" href="mailto:protocollege@proton.me?subject={{ ((project.title | replace('SIG: ', 'SIG ')) + ' Interest') | urlencode }}">Share your interest</a></p>
 {%- endif %}
 </article>
 {%- endif %}{% endfor %}

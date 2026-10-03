@@ -825,3 +825,42 @@ pre code {
 .potential-list li {
     margin-bottom: calc(var(--spacing-unit) * 0.5);
 }
+
+/* Conference crashing */
+.crash-card {
+    margin-bottom: var(--spacing-unit);
+}
+
+.crash-meta {
+    margin-top: 0.35rem;
+    color: var(--color-text-light);
+}
+
+.crash-event {
+    font-size: 0.8rem;
+    color: var(--color-text-light);
+}
+
+.crash-members {
+    font-size: 0.875rem;
+}
+
+.activity-label {
+    margin-bottom: 0.25rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+
+.crash-talks {
+    margin: 0 0 0.75rem;
+    padding-left: 1.25rem;
+    font-size: 0.875rem;
+}
+
+.crash-talks li {
+    margin-bottom: 0.35rem;
+}
+
+.crash-speakers {
+    color: var(--color-text-light);
+}

@@ -1,0 +1,32 @@
+{
+  "appearances": [
+    {
+      "type": "Organized session",
+      "session": "The Life of Protocols in the Life Sciences",
+      "event": "ISHPSSB 2025",
+      "eventFull": "International Society for the History, Philosophy, and Social Studies of Biology, biennial meeting",
+      "location": "Porto, Portugal",
+      "date": "2025-07-21",
+      "dateLabel": "21 July 2025",
+      "members": [
+        { "name": "Fotis Tsiroukis", "role": "co-organizer, chair and speaker" }
+      ],
+      "description": "A 90-minute session built as a transdisciplinary \"trialogue\" across three worlds that rarely share a room: academic studies of scientific practice, applied agricultural biology, and decentralized science infrastructure. Its aims were both critical, on the ethics and technics of protocol use, and constructive, on what protocol design could become in other digital formats. Co-chaired with Hans-Jörg Rheinberger (MPIWG), run as a Diverse Format Session as part of the PHIL_OS project, and entered for the Interdisciplinary Organized Session Prize.",
+      "talks": [
+        {
+          "title": "Non-Standard Non-Operating Procedures: How Scientific Protocols Change (And How They Change Science)",
+          "speakers": "Fotis Tsiroukis (TUM, SEMF)"
+        },
+        {
+          "title": "Cultivating Standardization: The Role of Protocols in Agricultural Research and Practice",
+          "speakers": "Thiresia Teresa Tzatzani, Georgios Psarras (ELGO-DIMITRA) and Fotis Tsiroukis (TUM)"
+        },
+        {
+          "title": "Should Agricultural Data Be Cultivated Like Crops or Harvested for Compliance?",
+          "speakers": "Denisa Kera (Bar-Ilan University), virtual"
+        }
+      ],
+      "link": "https://app.oxfordabstracts.com/events/73530/sessions/153822/download"
+    }
+  ]
+}

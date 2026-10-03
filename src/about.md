@@ -1,6 +1,6 @@
 ---
 layout: regular
-title: 
+title: Context & History
 description: Learn more about Protocollege
 ---
 

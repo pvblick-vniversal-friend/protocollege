@@ -53,9 +53,9 @@
       "title": "Conference Crashing",
       "status": "ongoing",
       "description": "Members turn up at symposia and conference sessions, alone or in groups, to bring protocol questions into other fields' rooms.",
-      "note": "Next outing to be announced.",
-      "link": "https://app.oxfordabstracts.com/events/73530/sessions/153822/download",
-      "linkText": "E.g.: ISHPSSB 2025, Symposium on Protocols in Biology",
+      "note": "Most recently: ISHPSSB 2025, Symposium on Protocols in Biology.",
+      "link": "/conference-crashing/",
+      "linkText": "Where we have turned up",
       "tags": [
         "symposia",
         "in the wild"
@@ -97,6 +97,18 @@
       "tags": [
         "sig",
         "cognition"
+      ]
+    },
+    {
+      "title": "Protocol Studies Concept Cartography",
+      "status": "forming",
+      "description": "Mapping the conceptual space of protocol studies: definitions, characterisations, examples and the routes between ideas. Modelled on Concept Cartography, which grew out of a reading group on epistemic diversity and whose cartographers include two Protocollege members.",
+      "link": "https://conceptcartography.github.io/conceptcartography/",
+      "linkText": "Concept Cartography",
+      "interest": true,
+      "tags": [
+        "concepts",
+        "mapping"
       ]
     }
   ],
