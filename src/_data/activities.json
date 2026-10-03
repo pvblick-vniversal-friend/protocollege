@@ -10,6 +10,7 @@
         "reading"
       ]
     },
+
     {
       "title": "Diagram Jams",
       "short": "DJams",
@@ -26,8 +27,21 @@
         "collective"
       ]
     }
+
   ],
   "projects": [
+    {
+      "title": "Protocol Literature Collection",
+      "status": "ongoing",
+      "description": "Our shared reading list, kept as a public Zotero group: protocol practice across domains, from the life sciences and biomedicine to distributed networks and indigenous rights.",
+      "link": "/library/",
+      "linkText": "Browse the library",
+      "tags": [
+        "library",
+        "open to all"
+      ]
+    },
+
     {
       "title": "Protocollage",
       "status": "ongoing",
@@ -39,6 +53,7 @@
         "protocollaboration"
       ]
     },
+    
     {
       "title": "Conference Crashing",
       "status": "ongoing",
@@ -51,17 +66,7 @@
         "in the wild"
       ]
     },
-    {
-      "title": "Protocol Literature Collection",
-      "status": "ongoing",
-      "description": "Our shared reading list, kept as a public Zotero group: protocol practice across domains, from the life sciences and biomedicine to distributed networks and indigenous rights.",
-      "link": "/library/",
-      "linkText": "Browse the library",
-      "tags": [
-        "library",
-        "open to all"
-      ]
-    },
+
     {
       "title": "SIG: Standardization & Variability in Biosciences",
       "status": "forming",
@@ -71,6 +76,7 @@
       ],
       "interest": true
     },
+    
     {
       "title": "SIG: Integral Protocol Theory",
       "status": "forming",
@@ -80,6 +86,7 @@
       ],
       "interest": true
     },
+
     {
       "title": "SIG: Ethnography of the “Boring”",
       "status": "forming",
@@ -90,6 +97,7 @@
         "methods"
       ]
     },
+
     {
       "title": "SIG: The Procedural Mind",
       "status": "forming",
@@ -100,6 +108,7 @@
         "cognition"
       ]
     },
+
     {
       "title": "Protocol Studies Concept Cartography",
       "status": "forming",
