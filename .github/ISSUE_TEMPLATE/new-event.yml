@@ -1,0 +1,87 @@
+name: New event
+description: Add, change or cancel an event on the proto.college schedule
+title: "[Event]: "
+labels: ["event"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Submitting this form adds the event to **Upcoming Events** on [proto.college](https://proto.college) within a few minutes.
+
+        - **To change or cancel an event**, submit the form again with the **same title and date**. It replaces the earlier entry.
+        - Only submissions from repository maintainers are published.
+  - type: dropdown
+    id: type
+    attributes:
+      label: Event type
+      options:
+        - Reading group
+        - Working group
+        - Session
+        - Other
+      default: 0
+    validations:
+      required: true
+  - type: input
+    id: title
+    attributes:
+      label: Title
+      placeholder: RG Biweekly
+    validations:
+      required: true
+  - type: input
+    id: date
+    attributes:
+      label: Date
+      description: "Format: YYYY-MM-DD"
+      placeholder: "2026-10-07"
+    validations:
+      required: true
+  - type: input
+    id: time
+    attributes:
+      label: Start time (UTC)
+      description: "24-hour clock in UTC. For example, 15:45 UTC is 16:45 in Berlin in winter and 17:45 in summer."
+      placeholder: "15:45"
+    validations:
+      required: true
+  - type: input
+    id: duration
+    attributes:
+      label: Duration (minutes)
+      placeholder: "90"
+  - type: input
+    id: topic
+    attributes:
+      label: Topic
+      placeholder: Algorithms & Distributed Networks
+  - type: textarea
+    id: readings
+    attributes:
+      label: Readings
+      description: One per line.
+      placeholder: |
+        Brekke et al. (2021) 'The Dissensus Protocol'
+        Galloway (2006) 'Protocol'
+  - type: input
+    id: link
+    attributes:
+      label: Join link
+      description: Meeting or registration link shown on the website. Must start with https://
+      placeholder: https://meet.jit.si/protocollege-reading-group
+  - type: input
+    id: access
+    attributes:
+      label: Access note
+      description: Optional, for example a meeting password or "Registration required".
+  - type: dropdown
+    id: status
+    attributes:
+      label: Status
+      options:
+        - Confirmed
+        - To be confirmed
+        - Cancelled
+      default: 0
+    validations:
+      required: true

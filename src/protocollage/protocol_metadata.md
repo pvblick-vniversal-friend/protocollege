@@ -1,27 +1,27 @@
 ---
-layout: wiki
-title: Protocol Metadata Schema
-pageType: wiki
-draft: true
-description: Draft schema for logging case studies on the site
+layout: regular
+title: Protocol Metadata Schemas
+description: 
 ---
 
 ## Empirical Case Study 
 
-protocol:
-protocol_type: 
-investigator:
-target_domain:
-reference_community:
+**protocol_name**:
+**protocol_type**: [systemic, epistemic, operational]
+**investigator**: [name]
+**target_domain**: [lab science, medicine, open source, legal etc.]
+**reference_community**: [academia, industry, activism, etc.], [field], [approach]
+**publication**: [citation]
 
-description:
+**description**:
+
 
 ## Development Case Study 
 
-protocol:
-protocol_type: 
-maker:
-target_domain:
-reference_community:
+**protocol_name**:
+**protocol_type**: [systemic, epistemic, operational]
+**maker**: [name]
+**reference_community**: [academia, industry, activism etc.], [field], [approach]
+**public_repository**: [link]
 
-description:
+**description**:

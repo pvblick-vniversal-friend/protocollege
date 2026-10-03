@@ -1,7 +1,7 @@
 ---
 layout: landing
 title: The Protocollege
-description: Generating proto-knowledge through proto-collage
+description: Towards a philosophy and ethics of protocolization
 ---
 
 **THE PROTOCOLLEGE** is a loose international assemblage of unruly researchers, coalescing around the study of protocols. 
@@ -20,7 +20,7 @@ We combine *readings, case studies* and *collaborative practices* to build share
 
 [All events →](/events/)
 {%- else -%}
-Nothing is scheduled right now. See past all past sessions on [Internet Archive](https://archive.org/details/@the_protocollege)!
+Nothing is scheduled right now. Find past sessions on [Internet Archive](https://archive.org/details/@the_protocollege)!
 {%- endif %}
 
 

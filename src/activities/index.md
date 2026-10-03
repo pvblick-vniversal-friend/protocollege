@@ -1,6 +1,6 @@
 ---
 layout: regular
-title: Activities
+title: Activities & Projects
 description: The sessions we run, the projects we are building, and what might come next
 ---
 
@@ -21,6 +21,9 @@ description: The sessions we run, the projects we are building, and what might c
 <p class="activity-recordings">{{ recordings.length }} recording{% if recordings.length != 1 %}s{% endif %}:
 {%- for recording in recordings.slice(0, 3) %} <a href="{{ recording.url }}" target="_blank" rel="noopener noreferrer">{{ recording.label }}</a><span class="activity-date"> {{ recording.dateLabel }}</span>{% if not loop.last %} · {% endif %}{% endfor %}
 </p>
+{%- endif %}
+{%- if session.artifacts %}
+<p class="activity-artifacts">{% for artifact in session.artifacts %}<a href="{{ artifact.url }}" target="_blank" rel="noopener noreferrer">{{ artifact.title }}</a>{% if not loop.last %} · {% endif %}{% endfor %}</p>
 {%- endif %}
 {%- if session.tags %}
 <p class="activity-tags">{% for tag in session.tags %}<span class="tag">{{ tag }}</span> {% endfor %}</p>
@@ -78,8 +81,11 @@ description: The sessions we run, the projects we are building, and what might c
 {%- if project.tags %}
 <p class="activity-tags">{% for tag in project.tags %}<span class="tag">{{ tag }}</span> {% endfor %}</p>
 {%- endif %}
+{%- if project.link %}
+<p class="activity-more"><a href="{{ project.link }}"{% if project.link.startsWith("http") %} target="_blank" rel="noopener noreferrer"{% endif %}>{{ project.linkText or "More" }} →</a></p>
+{%- endif %}
 {%- if project.interest %}
-<p><a class="btn-interest" href="mailto:protocollege@proton.me?subject={{ ('SIG ' + (project.title | replace('SIG: ', '')) + ' Interest') | urlencode }}">Share your interest</a></p>
+<p><a class="btn-interest" href="mailto:protocollege@proton.me?subject={{ ((project.title | replace('SIG: ', 'SIG ')) + ' Interest') | urlencode }}">Share your interest</a></p>
 {%- endif %}
 </article>
 {%- endif %}{% endfor %}

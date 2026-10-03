@@ -275,6 +275,56 @@ body {
     color: var(--color-text);
 }
 
+.tag-muted {
+    background-color: transparent;
+    border: 1px solid var(--color-border);
+    color: var(--color-text-light);
+}
+
+/* Library */
+[hidden] {
+    display: none !important;
+}
+
+.library-input {
+    width: 100%;
+    padding: 0.5rem 0.75rem;
+    font-family: var(--font-mono);
+    font-size: 1rem;
+    color: var(--color-text);
+    background-color: var(--color-bg);
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius);
+}
+
+.library-count {
+    margin: 0.5rem 0 0;
+    font-size: 0.875rem;
+    color: var(--color-text-light);
+}
+
+.library-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.library-item {
+    padding: var(--spacing-unit) 0;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.library-citation {
+    margin-top: 0.5rem;
+    padding-left: 1.5em;
+    text-indent: -1.5em;
+}
+
+.library-links {
+    margin: 0.5rem 0 0;
+    font-size: 0.875rem;
+}
+
 /* Buttons */
 .btn-contribute {
     display: inline-block;
@@ -318,7 +368,8 @@ body {
     margin-bottom: calc(var(--spacing-unit) * 2);
 }
 
-.blog-preview {
+.blog-preview,
+.activity-card {
     margin: 0;
     padding: calc(var(--spacing-unit) * 2);
     border-radius: 20px;
@@ -339,7 +390,9 @@ body {
         -2px -2px 0 rgba(100, 150, 255, 0.1);
 }
 
-.blog-preview-link:hover .blog-preview {
+.blog-preview-link:hover .blog-preview,
+.activity-link:hover .activity-card,
+.activity-card:hover {
     transform: translateY(-2px);
     box-shadow: 
         0 4px 8px rgba(0, 0, 0, 0.12),
@@ -352,13 +405,15 @@ body {
         -3px -3px 0 rgba(100, 150, 255, 0.15);
 }
 
-.blog-preview h2 {
+.blog-preview h2,
+.activity-card .activity-title {
     margin: 0 0 calc(var(--spacing-unit) * 0.75) 0;
     font-size: 1.5rem;
     color: var(--color-text);
 }
 
-.blog-preview-link:hover .blog-preview h2 {
+.blog-preview-link:hover .blog-preview h2,
+.activity-link:hover .activity-card .activity-title {
     color: var(--color-primary);
 }
 
@@ -624,3 +679,188 @@ pre code {
     padding: 0;
 }
 
+
+/* Activities */
+.activity-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: var(--spacing-unit);
+    margin: calc(var(--spacing-unit) * 1.5) 0;
+}
+
+.activity-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+.activity-card {
+    margin: 0;
+    height: 100%;
+    cursor: default;
+    /* Smaller than the blog cards they borrow their look from. */
+    padding: calc(var(--spacing-unit) * 1.1);
+    border-width: 5px;
+    border-radius: 14px;
+}
+
+.activity-card .activity-title {
+    font-size: 1.15rem;
+    margin-bottom: calc(var(--spacing-unit) * 0.5);
+}
+
+.activity-card p {
+    font-size: 0.9rem;
+}
+
+/* One tint per card, kept faint so the cards stay quiet together. */
+.activity-accent-1 {
+    background: linear-gradient(135deg, rgba(255, 193, 77, 0.16) 0%, rgba(255, 224, 168, 0.07) 100%);
+    border-color: rgba(255, 193, 77, 0.22);
+}
+
+.activity-accent-2 {
+    background: linear-gradient(135deg, rgba(92, 148, 255, 0.14) 0%, rgba(168, 200, 255, 0.06) 100%);
+    border-color: rgba(92, 148, 255, 0.2);
+}
+
+.activity-accent-3 {
+    background: linear-gradient(135deg, rgba(86, 196, 134, 0.14) 0%, rgba(170, 228, 194, 0.06) 100%);
+    border-color: rgba(86, 196, 134, 0.2);
+}
+
+.activity-accent-4 {
+    background: linear-gradient(135deg, rgba(167, 124, 255, 0.14) 0%, rgba(209, 186, 255, 0.06) 100%);
+    border-color: rgba(167, 124, 255, 0.2);
+}
+
+.activity-accent-5 {
+    background: linear-gradient(135deg, rgba(255, 122, 153, 0.14) 0%, rgba(255, 190, 206, 0.06) 100%);
+    border-color: rgba(255, 122, 153, 0.2);
+}
+
+.activity-accent-6 {
+    background: linear-gradient(135deg, rgba(64, 196, 196, 0.14) 0%, rgba(160, 226, 226, 0.06) 100%);
+    border-color: rgba(64, 196, 196, 0.2);
+}
+
+.btn-interest,
+.btn-interest-alt {
+    display: inline-block;
+    padding: 0.4rem 0.95rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    border-radius: 12px;
+    text-decoration: none;
+    transition: background-color 0.2s;
+}
+
+/* Tinted rather than solid, a little more opaque than the cards behind them. */
+.btn-interest {
+    color: var(--color-primary-dark);
+    background-color: rgba(92, 148, 255, 0.28);
+    border: 1px solid rgba(92, 148, 255, 0.38);
+}
+
+.btn-interest:hover {
+    background-color: rgba(92, 148, 255, 0.42);
+}
+
+.btn-interest-alt {
+    color: #1f6b43;
+    background-color: rgba(86, 196, 134, 0.28);
+    border: 1px solid rgba(86, 196, 134, 0.38);
+}
+
+.btn-interest-alt:hover {
+    background-color: rgba(86, 196, 134, 0.42);
+}
+
+.activity-actions {
+    margin-top: var(--spacing-unit);
+}
+
+.activity-link .activity-card {
+    cursor: pointer;
+}
+
+.activity-card p {
+    margin: 0 0 calc(var(--spacing-unit) * 0.75) 0;
+}
+
+.activity-card p:last-child {
+    margin-bottom: 0;
+}
+
+.activity-short {
+    color: var(--color-text-light);
+    font-size: 0.8em;
+}
+
+.activity-recordings,
+.activity-artifacts,
+.activity-note,
+.activity-tags,
+.activity-more {
+    font-size: 0.875rem;
+}
+
+.activity-date {
+    color: var(--color-text-light);
+}
+
+.activity-note {
+    color: var(--color-text-light);
+    font-style: italic;
+}
+
+.activity-more {
+    color: var(--color-primary);
+}
+
+.potential-list {
+    padding-left: 1.25rem;
+}
+
+.potential-list li {
+    margin-bottom: calc(var(--spacing-unit) * 0.5);
+}
+
+/* Conference crashing */
+.crash-card {
+    margin-bottom: var(--spacing-unit);
+}
+
+.crash-meta {
+    margin-top: 0.35rem;
+    color: var(--color-text-light);
+}
+
+.crash-event {
+    font-size: 0.8rem;
+    color: var(--color-text-light);
+}
+
+.crash-members {
+    font-size: 0.875rem;
+}
+
+.activity-label {
+    margin-bottom: 0.25rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+
+.crash-talks {
+    margin: 0 0 0.75rem;
+    padding-left: 1.25rem;
+    font-size: 0.875rem;
+}
+
+.crash-talks li {
+    margin-bottom: 0.35rem;
+}
+
+.crash-speakers {
+    color: var(--color-text-light);
+}
