@@ -9,7 +9,7 @@ branches:
     question: Who thinks about such things anyhow?
     href: /about/
   - label: activities
-    question: So, you can research protocols themselves?
+    question: So, you can research protocols in themselves? How
     href: /activities/
   - label: library
     question: Where can I learn more?
@@ -18,7 +18,7 @@ branches:
 
 ## Upcoming Events
 
-{% from "components/events.njk" import eventList -%}
+{% from "components/events.njk" import eventList -%} 
 {% set upcoming = schedule.events | upcomingEvents -%}
 {% if upcoming.length -%}
 {{ eventList(upcoming.slice(0, 2), compact=true) }}
