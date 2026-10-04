@@ -113,6 +113,11 @@ Content here...
 
 Add activities to `src/_data/activities.json` or create markdown files in `src/activities/`.
 
+#### Section Breaks
+
+- `---` - Plain break
+- `--- {.rule-ring}` - Break through a finder pattern, as on the landing page (`<hr class="rule-ring">` in templates)
+
 ### Shortcodes
 
 - `{% embed "url" %}` - Embed external content

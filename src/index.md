@@ -2,19 +2,21 @@
 layout: landing
 title: The Protocollege
 description: Towards a philosophy and ethics of protocolization
-# Follow-up questions branching out of the rotating card questions
-# (those are in src/_data/questions.json).
+# Follow-up questions, in the order the diagram leads through them after
+# the rotating card questions (those are in src/_data/questions.json).
 branches:
-  - label: about
-    question: Who thinks about such things anyhow?
-    href: /about/
   - label: activities
-    question: So, you can research protocols in themselves? How
+    question: So, you can study protocols in themselves? How?
     href: /activities/
   - label: library
     question: Where can I learn more?
     href: /library/
+  - label: about
+    question: Who thinks about such things anyhow?
+    href: /about/
 ---
+
+--- {.rule-ring}
 
 ## Upcoming Events
 
