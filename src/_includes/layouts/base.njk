@@ -19,7 +19,7 @@
     </style>
     {% endif %}
 </head>
-<body>
+<body{% if bodyClass %} class="{{ bodyClass }}"{% endif %}>
     {% include "components/header.njk" %}
     
     <main class="main-content">

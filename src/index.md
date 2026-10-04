@@ -2,14 +2,19 @@
 layout: landing
 title: The Protocollege
 description: Towards a philosophy and ethics of protocolization
+# Follow-up questions branching out of the rotating card questions
+# (those are in src/_data/questions.json).
+branches:
+  - label: about
+    question: Who thinks about such things anyhow?
+    href: /about/
+  - label: activities
+    question: So, you can research protocols themselves?
+    href: /activities/
+  - label: library
+    question: Where can I learn more?
+    href: /library/
 ---
-
-**THE PROTOCOLLEGE** is a loose international assemblage of unruly researchers, coalescing around the study of protocols. 
-
-We combine *readings, case studies* and *collaborative practices* to build shared understanding of protocolization _as a phenomenon_ and establish an empirically-based **Philosophy of Protocols**.
-
----
-
 
 ## Upcoming Events
 

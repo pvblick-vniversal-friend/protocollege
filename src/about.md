@@ -4,6 +4,10 @@ title: Context & History
 description: Learn more about Protocollege
 ---
 
+**THE PROTOCOLLEGE** is a loose international assemblage of unruly researchers, coalescing around the study of protocols. 
+
+Through readings, discussions and collaborations, we build shared understanding of protocolization _as a phenomenon_ and establish an empirically-based **Philosophy of Protocols**.
+
 ![Group photo of Protocollege members at the ISHPSSB 2025 Conference in Porto](/assets/images/porto.jpg){ .small-img .img-card .img-hover-zoom }
 
 ## The Story

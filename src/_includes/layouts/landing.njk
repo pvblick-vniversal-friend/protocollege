@@ -1,7 +1,9 @@
 ---
 layout: base
+bodyClass: is-landing
 ---
 <div class="landing-page">
+    {% include "components/intro.njk" %}
     <section class="hero">
         {{ content | safe }}
     </section>
