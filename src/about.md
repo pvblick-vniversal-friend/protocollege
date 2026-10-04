@@ -24,7 +24,7 @@ As we coalesced around the concept protocol, it became clear that what we actual
 The difference of this group's approach to other emerging attempts at a generalized study of protocols such as [Protocol Institute](https://protocol-institute.org/) is the focus on the _protocol as concept_ per se. Conceptual analysis, disambiguation and comparative understanding are foundamental to our philosophically-minded approach. But this conceptual focus is guided by close-quarters empirical encounter with protocols "in the wild". The original members were all philosophers using ethnographic and other socaial science methods to study protocol practices in science. This focus is important because, in contrast to an engineering-first approach to protocol study, the edge of Protocollege is closer to that of amateur naturalists, ethologists and romantic scientists yet turning the eye towards the world of behaviour and activity in human-made society. With this inquisitive view, protocols themselves are treated as forms of knowledge rather than engineered artifacts.
 
 
-----
+--- {.rule-ring}
 
 
 ## License

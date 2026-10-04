@@ -8,7 +8,7 @@ description: The Protocollege reading list, drawing from the public Zotero group
 
 *Citations are drawn from our [public Zotero group]({{ zotero.groupUrl }}). You can add items, collections and edit tags yourself!*
 
----
+--- {.rule-ring}
 
 **{{ zotero.count }} references**, APA style, date first.
 
