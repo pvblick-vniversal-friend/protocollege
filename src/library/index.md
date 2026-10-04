@@ -1,16 +1,18 @@
 ---
 layout: regular
-title: Library
+title: Protocol Library
 description: The Protocollege reading list, drawing from the public Zotero group
 ---
 
-> The Protocollege library is a collection of academic articles, books and other media focusing on a general study of protocol practice across domains. The focus is mostly on the life sciences and biomedicine, but extends to distributed networks and indigenous rights.
+*A collection of academic papers, books and other media on the meta-study of protocol practice across domains (mostly focused in in biology and medicine, but extends to distributed networks and indigenous knowledge).*
 
-> Citations are drawn from our [public Zotero group]({{ zotero.groupUrl }}). You can add items, collections and edit tags yourself!
+*Citations are drawn from our [public Zotero group]({{ zotero.groupUrl }}). You can add items, collections and edit tags yourself!*
+
+---
 
 **{{ zotero.count }} references**, APA style, date first.
 
-Add a tag with your name to the items you add to search all your own itesm by tag.
+> Add a tag with your name on added items for easy search.
 
 <div id="library-filter"></div>
 
