@@ -6,6 +6,13 @@
       "runtimeExecutable": "npm",
       "runtimeArgs": ["run", "serve"],
       "port": 8080
+    },
+    {
+      "name": "protocollege-preview",
+      "runtimeExecutable": "sh",
+      "runtimeArgs": ["-c", "npx eleventy --serve --port=${PORT:-8091} --output=_site"],
+      "port": 8091,
+      "autoPort": true
     }
   ]
 }

@@ -9,7 +9,7 @@
     <link rel="alternate" type="application/rss+xml" title="The Protocollege RSS Feed" href="/feed.xml">
     
 </head>
-<body>
+<body class="is-landing">
     <header class="site-header">
     <div class="header-container">
         <a href="/" class="site-logo">
@@ -28,11 +28,113 @@
     
     <main class="main-content">
         <div class="landing-page">
+    
+<section class="intro" aria-labelledby="intro-title">
+    <div class="intro-stage">
+        <div class="intro-head">
+            <h1 class="intro-title" id="intro-title">The Protocollege</h1>
+            <div class="rotator" data-rotator>
+                <p class="rotator-text" aria-live="off">
+                    <span class="rotator-q is-current">Could we think philosophically about protocols?</span>
+                    <span class="rotator-q">Is standardization always a good thing?</span>
+                    <span class="rotator-q">Is the scientific method, a protocol?</span>
+                    <span class="rotator-q">Would you rather trust the person, or the process?</span>
+                    <span class="rotator-q">Why did your bus arrive on time (or didn’t)?</span>
+                    <span class="rotator-q">What can guarantee that we can all agree to disagree?</span>
+                    <span class="rotator-q">What if I were to put 0.02mg more?</span>
+                    <span class="rotator-q">If we’re all on the same page, what’s on the page?</span>
+                    <span class="rotator-q">Do you ever conduct the same procedure twice?</span>
+                    <span class="rotator-q">What processes are you within, right now?!</span>
+                    <span class="rotator-q">Is there such a thing as a global standard?</span>
+                    <span class="rotator-q">Is there a protocol for making protocols?</span>
+                    <span class="rotator-q">What if me and you, were to do the same exact thing?</span>
+                    <span class="rotator-q">How do I know that you know I did the same thing as you?</span>
+                    <span class="rotator-q">Record? Recipe? Algorithm? Standard?</span>
+                    <span class="rotator-q">Are you sure “it just works?”</span>
+                    <span class="rotator-q">Could one care about the “boring things?”</span>
+                    <span class="rotator-q">Non-standard
+Non-operating
+Non-procedures</span>
+                    <span class="rotator-q">What kinds of agreements can stop a war?</span>
+                </p>
+                <span class="rotator-clock" aria-hidden="true"></span>
+                <button class="rotator-next" type="button" aria-label="Show another question" hidden></button>
+            </div>
+        </div>
+        <nav class="tree" aria-label="Follow a question">
+            <ul class="tree-branches">
+                <li class="tree-branch">
+                    <a class="tree-leaf" href="/about/">
+                        <span class="tree-question">Who thinks about such things anyhow?</span>
+                        <span class="tree-label">about <span class="tree-arrow" aria-hidden="true">→</span></span>
+                    </a>
+                </li>
+                <li class="tree-branch">
+                    <a class="tree-leaf" href="/activities/">
+                        <span class="tree-question">So, you can research protocols in themselves? How</span>
+                        <span class="tree-label">activities <span class="tree-arrow" aria-hidden="true">→</span></span>
+                    </a>
+                </li>
+                <li class="tree-branch">
+                    <a class="tree-leaf" href="/library/">
+                        <span class="tree-question">Where can I learn more?</span>
+                        <span class="tree-label">library <span class="tree-arrow" aria-hidden="true">→</span></span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <p class="intro-hint" aria-hidden="true">scroll</p>
+    </div>
+</section>
+<script>
+// Only decides which question is showing. The change itself and its timing
+// are CSS: the ring under the question fills over --dwell, and when that
+// animation ends the next question comes in. Hovering or focusing the
+// question pauses the ring; with reduced motion it never runs, so the
+// questions change only when clicked.
+(function () {
+    var rotator = document.querySelector("[data-rotator]");
+    if (!rotator) return;
+    var text = rotator.querySelector(".rotator-text");
+    var questions = text.children;
+    var clock = rotator.querySelector(".rotator-clock");
+    var next = rotator.querySelector(".rotator-next");
+
+    // The first card always opens; the rest come in a fresh order each visit.
+    var order = [];
+    for (var i = 1; i < questions.length; i++) order.push(i);
+    for (var j = order.length - 1; j > 0; j--) {
+        var k = Math.floor(Math.random() * (j + 1));
+        var swap = order[j];
+        order[j] = order[k];
+        order[k] = swap;
+    }
+    order.unshift(0);
+    var position = 0;
+
+    function advance(byHand) {
+        questions[order[position]].classList.remove("is-current");
+        position = (position + 1) % order.length;
+        // Announce the questions people ask for, not the ones on the timer.
+        text.setAttribute("aria-live", byHand ? "polite" : "off");
+        questions[order[position]].classList.add("is-current");
+        // Restart the ring for the new question.
+        clock.classList.remove("is-ticking");
+        void clock.offsetWidth;
+        clock.classList.add("is-ticking");
+    }
+
+    clock.addEventListener("animationend", function (event) {
+        if (event.animationName === "rotator-tick") advance(false);
+    });
+    next.addEventListener("click", function () { advance(true); });
+    next.hidden = false;
+    clock.classList.add("is-ticking");
+})();
+</script>
+
     <section class="hero">
-        <p><strong>THE PROTOCOLLEGE</strong> is a loose international assemblage of unruly researchers, coalescing around the study of protocols.</p>
-<p>We combine <em>readings, case studies</em> and <em>collaborative practices</em> to build shared understanding of protocolization <em>as a phenomenon</em> and establish an empirically-based <strong>Philosophy of Protocols</strong>.</p>
-<hr>
-<h2>Upcoming Events</h2>
+        <h2>Upcoming Events</h2>
 <p>Nothing is scheduled right now. Find past sessions on <a href="https://archive.org/details/@the_protocollege">Internet Archive</a>!</p>
 <h2>Get Involved</h2>
 <p><a href="https://chat.whatsapp.com/IgEjOitPo6b28zHJ87bRlT">Join Our Chat</a></p>

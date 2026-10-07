@@ -1,0 +1,108 @@
+{# Landing intro: the questions from the business cards rotate under the
+   title, and the follow-up questions in index.md lead on from them, one
+   after another, towards the rest of the site. The look, and the drawing of
+   the diagram on scroll, are under "Landing Page" in css/style.css. #}
+<section class="intro" aria-labelledby="intro-title">
+    <div class="intro-stage">
+        <div class="intro-head">
+            <h1 class="intro-title" id="intro-title">{{ site.title }}</h1>
+            <div class="rotator" data-rotator>
+                <p class="rotator-text" aria-live="off">
+                {%- for question in questions %}
+                    <span class="rotator-q{% if loop.first %} is-current{% endif %}">{{ question }}</span>
+                {%- endfor %}
+                </p>
+                <span class="rotator-clock" aria-hidden="true"></span>
+                <button class="rotator-next" type="button" aria-label="Show another question" hidden></button>
+            </div>
+        </div>
+        <nav class="tree" aria-label="Follow a question">
+            <ul class="tree-branches">
+            {%- for branch in branches %}
+                <li class="tree-branch">
+                    <a class="tree-leaf" href="{{ branch.href }}">
+                        <span class="tree-question">{{ branch.question }}</span>
+                        <span class="tree-label">{{ branch.label }} <span class="tree-arrow" aria-hidden="true">→</span></span>
+                    </a>
+                </li>
+            {%- endfor %}
+            </ul>
+        </nav>
+        <a class="intro-hint" href="#intro-drawn">scroll<span class="intro-hint-icon" aria-hidden="true"></span></a>
+    </div>
+    <span class="intro-drawn" id="intro-drawn"></span>
+</section>
+<script>
+// Only decides which question is showing. The change itself and its timing
+// are CSS: the ring under the question fills over --dwell, and when that
+// animation ends the next question comes in. Hovering or focusing the
+// question pauses the ring; with reduced motion it never runs, so the
+// questions change only when clicked.
+(function () {
+    var rotator = document.querySelector("[data-rotator]");
+    if (!rotator) return;
+    var text = rotator.querySelector(".rotator-text");
+    var questions = text.children;
+    var clock = rotator.querySelector(".rotator-clock");
+    var next = rotator.querySelector(".rotator-next");
+
+    // The first card always opens; the rest come in a fresh order each visit.
+    var order = [];
+    for (var i = 1; i < questions.length; i++) order.push(i);
+    for (var j = order.length - 1; j > 0; j--) {
+        var k = Math.floor(Math.random() * (j + 1));
+        var swap = order[j];
+        order[j] = order[k];
+        order[k] = swap;
+    }
+    order.unshift(0);
+
+    function advance(byHand) {
+        // Take the current question from the page rather than a count kept
+        // here, and clear every mark, so only one can ever be showing.
+        var current = Array.prototype.indexOf.call(questions, text.querySelector(".is-current"));
+        var following = order[(order.indexOf(current) + 1) % order.length];
+        for (var q = 0; q < questions.length; q++) questions[q].classList.remove("is-current");
+        // Announce the questions people ask for, not the ones on the timer.
+        text.setAttribute("aria-live", byHand ? "polite" : "off");
+        questions[following].classList.add("is-current");
+        // Restart the ring for the new question.
+        clock.classList.remove("is-ticking");
+        void clock.offsetWidth;
+        clock.classList.add("is-ticking");
+    }
+
+    // Assigned rather than added: Eleventy's dev server reruns this script
+    // when it patches the page, and a second set of listeners would start a
+    // second rotation over the first.
+    clock.onanimationend = function (event) {
+        if (event.animationName === "rotator-tick") advance(false);
+    };
+    next.onclick = function () { advance(true); };
+    next.hidden = false;
+    clock.classList.add("is-ticking");
+})();
+
+// The drawing on scroll is CSS too, where the browser has scroll-driven
+// animations. Where it doesn't (Firefox, for now), this reports how far the
+// intro has been scrolled through as --progress, and how far the page has
+// as --scrolled, which the CSS sets its paused animations to.
+(function () {
+    if (CSS.supports("animation-timeline: view()")) return;
+    var intro = document.querySelector(".intro");
+    var header = document.querySelector(".site-header");
+    if (!intro || !header) return;
+
+    function update() {
+        var box = intro.getBoundingClientRect();
+        var pinned = box.height - window.innerHeight;
+        intro.style.setProperty("--progress", pinned > 0 ? Math.min(Math.max(-box.top / pinned, 0), 1) : 1);
+        header.style.setProperty("--scrolled", Math.min(window.scrollY / (window.innerHeight / 4), 1));
+    }
+
+    // Assigned rather than added, as above.
+    window.onscroll = update;
+    window.onresize = update;
+    update();
+})();
+</script>

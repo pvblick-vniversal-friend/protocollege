@@ -38,9 +38,10 @@ description: The sessions we run, the projects we are building, and what might c
 {%- endfor %}
 </div>
 
----
 
 ## Projects
+
+---
 
 ### Ongoing
 
@@ -68,6 +69,8 @@ description: The sessions we run, the projects we are building, and what might c
 {%- endif %}{% endfor %}
 </div>
 
+---
+
 ### Forming
 
 <div class="activity-grid">
@@ -93,4 +96,4 @@ description: The sessions we run, the projects we are building, and what might c
 
 <p class="activity-actions"><a class="btn-interest-alt" href="https://chat.whatsapp.com/IgEjOitPo6b28zHJ87bRlT" target="_blank" rel="noopener noreferrer">Or speak about your own</a></p>
 
----
+--- {.rule-ring}

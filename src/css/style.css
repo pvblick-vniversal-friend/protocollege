@@ -9,6 +9,10 @@
     --color-bg: #ffffff;
     --color-bg-alt: #fff3d9;
     --color-border: #e0e0e0;
+    /* From the business cards. */
+    --card-gold: #d88f13;
+    --card-ink: #6f4b0f;
+    --card-grey: #75706c;
     --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     --font-mono: Consolas, monospace;
     --spacing-unit: 1rem;
@@ -87,8 +91,689 @@ body {
 }
 
 /* Landing Page */
+.is-landing .main-content {
+    padding-top: 0;
+}
+
 .landing-page {
-    padding: var(--spacing-unit) 0;
+    padding: 0 0 var(--spacing-unit);
+}
+
+/* Landing intro: the title, the rotating card questions, and the follow-up
+   questions they lead on to. The rules up to "Drawing on scroll" lay out the
+   finished diagram; that part then pins it to the screen and draws it as you
+   scroll. */
+.intro {
+    --line: 2px;
+    --bend: 14px;
+    --header-h: 4.6rem;
+    position: relative;
+    font-family: "Roboto Mono", var(--font-mono);
+}
+
+.intro-stage {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: safe center;
+    min-height: 100vh;
+    min-height: 100svh;
+    padding: 3rem 0 2.5rem;
+    text-align: center;
+}
+
+.intro-head {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: clamp(1.25rem, 3.5vh, 2rem);
+    width: 100%;
+}
+
+/* As on the cards, lifted off the page by a crisp shadow down and right. */
+.intro-title {
+    margin: 0;
+    font-size: clamp(1.9375rem, 1.4375rem + 2.5vw, 3.1875rem);
+    font-weight: 700;
+    line-height: 1.2;
+    background: linear-gradient(to bottom, #e09516, #8c5f17);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    filter: drop-shadow(2px 3px 1.5px rgba(111, 75, 15, 0.3));
+}
+
+/* Every question sits in the same grid cell, so the block keeps the height
+   of the longest and nothing below it moves when they change. */
+.rotator {
+    --dwell: 4s;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: clamp(1rem, 2.5vh, 1.5rem);
+    width: min(100%, 36rem);
+}
+
+.rotator-text {
+    display: grid;
+    width: 100%;
+    margin: 0;
+    font-size: clamp(1.3rem, 0.95rem + 1.9vw, 2.25rem);
+    font-style: italic;
+    line-height: 1.35;
+    color: var(--card-grey);
+}
+
+.rotator-q {
+    grid-area: 1 / 1;
+    align-self: center;
+    white-space: pre-line;
+    text-wrap: balance;
+    opacity: 0;
+    visibility: hidden;
+    scale: 0.985;
+    filter: blur(6px);
+    transition: opacity 0.7s ease, scale 0.7s ease, filter 0.7s ease, visibility 0s linear 0.7s;
+}
+
+.rotator-q.is-current {
+    opacity: 1;
+    visibility: visible;
+    scale: 1;
+    filter: none;
+    transition-delay: 0s;
+}
+
+/* Lies over the question, so a click anywhere on it moves on. */
+.rotator-next {
+    position: absolute;
+    inset: -0.75rem -1rem;
+    padding: 0;
+    border: 0;
+    border-radius: 12px;
+    background: none;
+    cursor: pointer;
+}
+
+.rotator-next:focus-visible {
+    outline: 2px solid var(--card-gold);
+    outline-offset: 2px;
+}
+
+/* A small QR finder pattern: the root of the diagram, and the timer. Its
+   ring fills over --dwell, and the script moves on when it is full. */
+@property --tick {
+    syntax: "<number>";
+    inherits: false;
+    initial-value: 1;
+}
+
+.rotator-clock {
+    position: relative;
+    width: 1.25rem;
+    height: 1.25rem;
+}
+
+.rotator-clock::before,
+.rotator-clock::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+}
+
+.rotator-clock::before {
+    inset: 0.375rem;
+    background-color: var(--card-ink);
+}
+
+.rotator-clock::after {
+    inset: 0;
+    background: conic-gradient(var(--card-ink) calc(var(--tick) * 1turn), rgba(111, 75, 15, 0.2) 0);
+    -webkit-mask: radial-gradient(closest-side, transparent calc(100% - 3px), #000 calc(100% - 2.5px));
+    mask: radial-gradient(closest-side, transparent calc(100% - 3px), #000 calc(100% - 2.5px));
+}
+
+.rotator-clock.is-ticking::after {
+    animation: rotator-tick var(--dwell) linear forwards;
+}
+
+.rotator:has(:focus-visible) .rotator-clock::after {
+    animation-play-state: paused;
+}
+
+@media (hover: hover) {
+    .rotator:hover .rotator-clock::after {
+        animation-play-state: paused;
+    }
+}
+
+@keyframes rotator-tick {
+    from { --tick: 0; }
+    to { --tick: 1; }
+}
+
+/* The follow-up questions, taken in turn as on the logo: a line drops from
+   the ring into the first box, and each box loops round into the next, the
+   boxes stepping right as they go down. The lines are borders. Each box
+   carries the half-loop arriving at it (::before), the half leaving it
+   (::after) and the arrowhead on its edge (.tree-leaf::before), so the loops
+   follow however tall the boxes are. Laid out for three boxes. */
+.tree {
+    --trunk: 2.25rem;
+    --step: 3rem;
+    --gap: 1.75rem;
+    --tip: 0.6rem;
+    position: relative;
+    width: 100%;
+    padding-top: var(--trunk);
+}
+
+/* From the ring down into the first box. */
+.tree::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: calc(50% - var(--line) / 2);
+    height: var(--trunk);
+    border-left: var(--line) solid var(--card-ink);
+    transition: border-color 0.2s ease;
+}
+
+.tree-branches {
+    display: grid;
+    gap: var(--gap);
+    width: min(100%, 30rem);
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+}
+
+.tree-branch {
+    position: relative;
+    width: calc(100% - 2 * var(--step));
+}
+
+.tree-branch:nth-child(2) {
+    margin-left: var(--step);
+}
+
+.tree-branch:nth-child(3) {
+    margin-left: calc(2 * var(--step));
+}
+
+.tree-branch::before,
+.tree-branch::after {
+    position: absolute;
+    border: 0 solid var(--card-ink);
+    transition: border-color 0.2s ease;
+}
+
+/* Out of the first box to the right, round and down... */
+.tree-branch:nth-child(1)::after {
+    content: "";
+    top: calc(50% - var(--line) / 2);
+    left: 100%;
+    width: calc(2 * var(--step));
+    height: calc(50% + var(--line) / 2 + var(--gap) / 2);
+    border-top-width: var(--line);
+    border-right-width: var(--line);
+    border-top-right-radius: var(--bend);
+}
+
+/* ...and back into the second from the right. */
+.tree-branch:nth-child(2)::before {
+    content: "";
+    top: calc(var(--gap) / -2);
+    left: 100%;
+    width: var(--step);
+    height: calc(50% + var(--gap) / 2 + var(--line) / 2);
+    border-right-width: var(--line);
+    border-bottom-width: var(--line);
+    border-bottom-right-radius: var(--bend);
+}
+
+/* Out of the second to the left, round and down... */
+.tree-branch:nth-child(2)::after {
+    content: "";
+    top: calc(50% - var(--line) / 2);
+    right: 100%;
+    width: var(--step);
+    height: calc(50% + var(--line) / 2 + var(--gap) / 2);
+    border-top-width: var(--line);
+    border-left-width: var(--line);
+    border-top-left-radius: var(--bend);
+}
+
+/* ...and into the third from the left. */
+.tree-branch:nth-child(3)::before {
+    content: "";
+    top: calc(var(--gap) / -2);
+    right: 100%;
+    width: calc(2 * var(--step));
+    height: calc(50% + var(--gap) / 2 + var(--line) / 2);
+    border-left-width: var(--line);
+    border-bottom-width: var(--line);
+    border-bottom-left-radius: var(--bend);
+}
+
+.tree-leaf {
+    position: relative;
+    display: block;
+    height: 100%;
+    padding: 1rem 1.1rem 1.25rem;
+    border: var(--line) solid var(--card-ink);
+    border-radius: var(--bend);
+    background-color: var(--color-bg);
+    color: inherit;
+    text-align: left;
+    text-decoration: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Arrowheads: a corner of border, turned to point at the box. */
+.tree-leaf::before {
+    content: "";
+    position: absolute;
+    width: var(--tip);
+    height: var(--tip);
+    border: 0 solid var(--card-ink);
+    border-width: 0 0 var(--line) var(--line);
+    translate: -50% -50%;
+    transition: border-color 0.2s ease;
+}
+
+.tree-branch:nth-child(1) .tree-leaf::before {
+    top: calc(-1 * var(--line) - var(--tip) * 0.7071);
+    left: calc(50% + var(--step));
+    rotate: -45deg;
+}
+
+.tree-branch:nth-child(2) .tree-leaf::before {
+    top: 50%;
+    left: calc(100% + var(--line) + var(--tip) * 0.7071);
+    rotate: 45deg;
+}
+
+.tree-branch:nth-child(3) .tree-leaf::before {
+    top: 50%;
+    left: calc(-1 * var(--line) - var(--tip) * 0.7071);
+    rotate: -135deg;
+}
+
+/* Where the question leads, set into the bottom edge, clear of the lines. */
+.tree-label {
+    position: absolute;
+    right: 0.8rem;
+    bottom: 0;
+    translate: 0 50%;
+    padding: 0 0.4rem;
+    background-color: var(--color-bg);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    line-height: 1.4;
+    color: var(--card-ink);
+}
+
+.tree-arrow {
+    display: inline-block;
+    transition: translate 0.2s ease;
+}
+
+.tree-question {
+    display: block;
+    font-size: 1rem;
+    font-style: italic;
+    line-height: 1.45;
+    color: #5f5a56;
+}
+
+.tree-leaf:hover,
+.tree-leaf:focus-visible {
+    border-color: var(--card-gold);
+    box-shadow: 0 10px 24px rgba(111, 75, 15, 0.14);
+}
+
+.tree-leaf:focus-visible {
+    outline: 2px solid var(--card-gold);
+    outline-offset: 3px;
+}
+
+.tree-leaf:hover .tree-arrow,
+.tree-leaf:focus-visible .tree-arrow {
+    translate: 3px 0;
+}
+
+/* Hovering a question lights up the way to it. */
+.tree:has(.tree-leaf:hover)::before,
+.tree-branch:has(.tree-leaf:hover)::before,
+.tree-branch:has(~ .tree-branch .tree-leaf:hover)::before,
+.tree-branch:has(~ .tree-branch .tree-leaf:hover)::after,
+.tree-branch:has(~ .tree-branch .tree-leaf:hover) .tree-leaf::before,
+.tree-leaf:hover::before,
+.tree-leaf:focus-visible::before {
+    border-color: var(--card-gold);
+}
+
+@media (max-width: 719.98px) {
+    .tree {
+        --trunk: 1.75rem;
+        --step: 1.75rem;
+        --gap: 1.4rem;
+    }
+
+    .tree-question {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .intro {
+        --header-h: 7rem;
+    }
+}
+
+/* Scroll cue at the foot of the pinned intro. Following it scrolls down to
+   the finished diagram, drawing it on the way. */
+.intro-hint {
+    display: none;
+    position: absolute;
+    bottom: 1.25rem;
+    left: 50%;
+    translate: -50% 0;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    color: var(--card-ink);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.intro-hint-icon {
+    position: relative;
+    width: 2.5rem;
+    height: 2.5rem;
+    border: var(--line) solid currentColor;
+    border-radius: 50%;
+}
+
+.intro-hint-icon::before {
+    content: "";
+    position: absolute;
+    top: 42%;
+    left: 50%;
+    width: 0.6rem;
+    height: 0.6rem;
+    border: 0 solid currentColor;
+    border-width: 0 0 var(--line) var(--line);
+    translate: -50% -50%;
+    rotate: -45deg;
+    animation: hint-bob 1.6s ease-in-out infinite;
+}
+
+.intro-hint:hover,
+.intro-hint:focus-visible {
+    color: var(--card-gold);
+}
+
+.intro-hint:focus-visible {
+    outline: 2px solid var(--card-gold);
+    outline-offset: 4px;
+    border-radius: 8px;
+}
+
+@keyframes hint-bob {
+    50% { translate: -50% calc(-50% + 0.3rem); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .rotator-q {
+        scale: 1;
+        filter: none;
+        transition: opacity 0.3s ease, visibility 0s linear 0.3s;
+    }
+
+    .rotator-clock.is-ticking::after {
+        animation: none;
+    }
+}
+
+/* The header stays out of sight until the page is scrolled. Without
+   scroll-driven animations, the script reports the scroll as --scrolled. */
+@supports (animation-timeline: scroll()) {
+    .is-landing .site-header {
+        position: fixed;
+        inset: 0 0 auto;
+        animation: header-in linear both;
+        animation-timeline: scroll(root);
+        animation-range: 0 25svh;
+    }
+}
+
+@supports not (animation-timeline: scroll()) {
+    @media (scripting: enabled) {
+        .is-landing .site-header {
+            position: fixed;
+            inset: 0 0 auto;
+            animation: header-in 1s linear both paused;
+            animation-delay: calc(var(--scrolled, 1) * -1s);
+        }
+    }
+}
+
+/* Keyboard users reaching the menu get to see it. */
+.is-landing .site-header:focus-within {
+    animation: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .is-landing .site-header {
+        animation-name: header-fade;
+    }
+}
+
+/* Drawing on scroll. The intro grows taller than the screen and its stage
+   pins in place: scrolling through it raises the question, then draws the
+   diagram one box at a time and holds it before the events come up. Each
+   piece plays between its --from and --to, as fractions of that scroll,
+   which --intro-scroll sets the length of. Browsers with scroll-driven
+   animations play them on their own; elsewhere (Firefox, for now) the
+   script reports the scroll as --progress and the same animations, paused,
+   are set to it through their delay. Only where the finished diagram fits
+   on one screen: narrow screens need more height, as their header wraps. */
+.intro {
+    --intro-scroll: 180svh;
+}
+
+.intro-hint                          { --from: 0;    --to: 0.04; }
+.intro-head                          { --from: 0;    --to: 0.08; }
+.tree::before                        { --from: 0.08; --to: 0.18; }
+.tree-branch:nth-child(1) .tree-leaf { --from: 0.17; --to: 0.24; }
+.tree-branch:nth-child(1)::after     { --from: 0.25; --to: 0.37; }
+.tree-branch:nth-child(2)::before    { --from: 0.37; --to: 0.45; }
+.tree-branch:nth-child(2) .tree-leaf { --from: 0.44; --to: 0.51; }
+.tree-branch:nth-child(2)::after     { --from: 0.52; --to: 0.62; }
+.tree-branch:nth-child(3)::before    { --from: 0.62; --to: 0.72; }
+.tree-branch:nth-child(3) .tree-leaf { --from: 0.71; --to: 0.78; }
+
+@media (prefers-reduced-motion: no-preference) and (scripting: enabled) and (min-width: 720px) and (min-height: 680px),
+       (prefers-reduced-motion: no-preference) and (scripting: enabled) and (max-width: 719.98px) and (min-height: 700px) {
+    html:has(.intro) {
+        scroll-behavior: smooth;
+    }
+
+    .intro {
+        --head-offset: 7.5rem;
+        height: calc(100svh + var(--intro-scroll));
+    }
+
+    .intro-stage {
+        position: sticky;
+        top: 0;
+        height: 100svh;
+        min-height: 0;
+        padding: var(--header-h) 0 1.25rem;
+    }
+
+    /* Where following the scroll cue lands: just after the last box is in. */
+    .intro-drawn {
+        position: absolute;
+        top: calc(var(--intro-scroll) * 0.8);
+    }
+
+    .intro-hint {
+        display: flex;
+        animation-name: hint-out;
+    }
+
+    .intro-head {
+        animation-name: head-rise;
+    }
+
+    .tree-leaf {
+        animation-name: leaf-pop;
+    }
+
+    .tree::before {
+        animation-name: draw-down;
+    }
+
+    .tree-branch:nth-child(1)::after {
+        animation-name: draw-right-down;
+    }
+
+    .tree-branch:nth-child(2)::before {
+        animation-name: draw-down-left;
+    }
+
+    .tree-branch:nth-child(2)::after {
+        animation-name: draw-left-down;
+    }
+
+    .tree-branch:nth-child(3)::before {
+        animation-name: draw-down-right;
+    }
+
+    .intro-hint,
+    .intro-head,
+    .tree-leaf,
+    .tree::before,
+    .tree-branch::before,
+    .tree-branch::after {
+        animation-fill-mode: both;
+        animation-timing-function: linear;
+    }
+
+    @supports (animation-timeline: view()) {
+        .intro {
+            view-timeline: --intro block;
+        }
+
+        .intro-hint,
+        .intro-head,
+        .tree-leaf,
+        .tree::before,
+        .tree-branch::before,
+        .tree-branch::after {
+            animation-timeline: --intro;
+            animation-range: contain calc(var(--from) * 100%) contain calc(var(--to) * 100%);
+        }
+    }
+
+    @supports not (animation-timeline: view()) {
+        .intro-hint,
+        .intro-head,
+        .tree-leaf,
+        .tree::before,
+        .tree-branch::before,
+        .tree-branch::after {
+            animation-duration: 1s;
+            animation-play-state: paused;
+            animation-delay: calc(clamp(0, (var(--progress, 1) - var(--from)) / (var(--to) - var(--from)), 1) * -1s);
+        }
+    }
+
+    /* Tabbing into the questions skips to the finished diagram. */
+    .intro:has(.tree :focus-visible) .intro-head,
+    .intro:has(.tree :focus-visible) .tree-leaf,
+    .intro:has(.tree :focus-visible) .tree::before,
+    .intro:has(.tree :focus-visible) .tree-branch::before,
+    .intro:has(.tree :focus-visible) .tree-branch::after {
+        animation: none !important;
+    }
+
+    .intro:has(.tree :focus-visible) .intro-hint {
+        display: none;
+    }
+}
+
+@media (prefers-reduced-motion: no-preference) and (scripting: enabled) and (max-width: 719.98px) and (min-height: 700px) {
+    .intro {
+        --head-offset: 6rem;
+    }
+}
+
+@keyframes header-in {
+    from { opacity: 0; translate: 0 -100%; pointer-events: none; }
+    to { opacity: 1; translate: 0 0; pointer-events: auto; }
+}
+
+@keyframes header-fade {
+    from { opacity: 0; pointer-events: none; }
+    to { opacity: 1; pointer-events: auto; }
+}
+
+@keyframes head-rise {
+    from { translate: 0 var(--head-offset); }
+}
+
+@keyframes hint-out {
+    to { opacity: 0; visibility: hidden; }
+}
+
+@keyframes leaf-pop {
+    from { opacity: 0; scale: 0.9; translate: 0 0.75rem; pointer-events: none; }
+    70% { opacity: 1; scale: 1.02; translate: 0 0; }
+    to { opacity: 1; scale: 1; translate: 0 0; pointer-events: auto; }
+}
+
+/* Lines are drawn by unclipping them in the direction they run. */
+@keyframes draw-down {
+    from { clip-path: inset(0 0 100% 0); }
+    to { clip-path: inset(0); }
+}
+
+/* Along the top from the right end, then down the left edge. */
+@keyframes draw-left-down {
+    0% { clip-path: inset(0 0 calc(100% - var(--line)) 100%); }
+    50% { clip-path: inset(0 0 calc(100% - var(--line)) 0); }
+    100% { clip-path: inset(0); }
+}
+
+/* Along the top from the left end, then down the right edge. */
+@keyframes draw-right-down {
+    0% { clip-path: inset(0 100% calc(100% - var(--line)) 0); }
+    50% { clip-path: inset(0 0 calc(100% - var(--line)) 0); }
+    100% { clip-path: inset(0); }
+}
+
+/* Down the right edge, then left along the bottom. */
+@keyframes draw-down-left {
+    0% { clip-path: inset(0 0 100% calc(100% - var(--line))); }
+    60% { clip-path: inset(0 0 0 calc(100% - var(--line))); }
+    100% { clip-path: inset(0); }
+}
+
+/* Down the left edge, then right along the bottom. */
+@keyframes draw-down-right {
+    0% { clip-path: inset(0 calc(100% - var(--line)) 100% 0); }
+    60% { clip-path: inset(0 calc(100% - var(--line)) 0 0); }
+    100% { clip-path: inset(0); }
 }
 
 .hero {
@@ -117,6 +802,36 @@ body {
     font-size: 1.25rem;
     color: var(--color-text-light);
     margin-bottom: calc(var(--spacing-unit) * 2);
+}
+
+
+/* Section breaks: --- in markdown gives a plain rule, and --- {.rule-ring}
+   one through a finder pattern, like the one under the landing questions. */
+hr {
+    border: 0;
+    border-top: 1px solid var(--color-border);
+}
+
+.rule-ring {
+    position: relative;
+    overflow: visible;
+    height: 1.25rem;
+    margin: 3rem auto 2rem;
+    border-top: 0;
+    background: linear-gradient(var(--color-border), var(--color-border)) center / 100% 1px no-repeat;
+}
+
+.rule-ring::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: calc(50% - 0.625rem);
+    width: 1.25rem;
+    height: 1.25rem;
+    border: 3px solid var(--card-ink);
+    border-radius: 50%;
+    background: radial-gradient(circle, var(--card-ink) 0 4px, var(--color-bg) 4.5px);
+    box-shadow: 0 0 0 0.5rem var(--color-bg);
 }
 
 
