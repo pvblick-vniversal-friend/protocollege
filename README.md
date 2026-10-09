@@ -7,11 +7,15 @@ The Protocollege is a community around the study of the epistemology and ethics 
 This is the community's website, to serve as public repository of activities, projects and sessions.
 The static site is built with [Eleventy (11ty)](https://www.11ty.dev/).
 
+---
+
 The goal of this website is to not only create a container for our small group's activities, but a template for other PROTOCOLLEGES to fork and customize. This is the first step to the making of *an institution, not an institute*.
+
+You are free to clone the repository and copy any of the pages and templates for your own website (under the AGPL-3.0 license, see [LICENSE](LICENSE)).
 
 ## Version
 
-**v0.1.0** - Initial release
+**v2.0**
 
 ## Features
 
@@ -22,7 +26,7 @@ The goal of this website is to not only create a container for our small group's
 - 📅 **Schedule** for reading groups and sessions
 - 🎯 **Activities** gallery for community projects
 - 🎨 **Customizable design** with minimal CSS
-- ⚡ **Zero JavaScript** by default (pure static HTML/CSS)
+- ⚡ **Minimal JavaScript** built on pure HTML/CSS, inspired by (HTML energy)[https://html.energy/] and (Liberatory Computing)[https://github.com/libcomp/libcomp-website].
 
 ## Quick Start
 
@@ -50,25 +54,6 @@ The goal of this website is to not only create a container for our small group's
 
    The site will be available at `http://localhost:8080`
 
-## Project Structure
-
-```
-protocollege/
-├── src/                    # Source files
-│   ├── _data/             # Data files (JSON/YAML)
-│   ├── _includes/          # Templates and layouts
-│   │   ├── layouts/       # Page layouts
-│   │   ├── components/    # Reusable components
-│   │   └── shortcodes/    # Custom shortcodes
-│   ├── protocollage/      # Wiki-style pages (protocols & case studies)
-│   ├── activities/         # Community activities
-│   ├── blog/              # Blog posts
-│   ├── css/               # Stylesheets
-│   └── assets/            # Images and media
-├── .eleventy.js           # Eleventy configuration
-├── package.json           # Dependencies
-└── dist/                  # Built site (generated)
-```
 
 ## Usage
 

@@ -4,20 +4,18 @@ title: Context & History
 description: Learn more about Protocollege
 ---
 
-**THE PROTOCOLLEGE** is a loose international assemblage of unruly researchers, coalescing around the study of protocols. 
-
-Through readings, discussions and collaborations, we build shared understanding of protocolization _as a phenomenon_ and establish an empirically-based **Philosophy of Protocols**.
+**THE PROTOCOLLEGE** is an international thought collective of heterodox researchers, coalescing around the study of protocols. Through readings and activities, we build common understanding of protocolization _as a phenomenon_. Our mission is to establish an _intellectual tradition_ that pays deep attention to all these "boring" things we tend to relfect the least about yet are everywhere, forming the operational cornerstone of science, technology and organizations; standards, norms, infrastructures and most of all **protocols**. 
 
 ![Group photo of Protocollege members at the ISHPSSB 2025 Conference in Porto](/assets/images/porto.jpg){ .small-img .img-card .img-hover-zoom }
 
 ## The Story
 
-In Spring 2025, a few curious minds decided to come together to form a special interest group arounf protocol-based practices in science. There was a common sense that protocols were a cornerstone of knowledge-making practices in various technical fields but lacked a theoretical basis to properly study them in their own right. And so, Thus, the Protcollege was born out of a loose group of scholars with an interest in the philosophical meta-study of scientific practice. The basis was initially in Munich but has since expanded to cover members from California all thr way to Australia. Naturally, this makes coordination a bummer, but figuring out protocols for assembling in the network age is also part of the game.
+In Spring 2025, a few curious minds decided to come together to form a special interest group around protocol-based practices in science. There was a common sense that protocols were a cornerstone of knowledge-making practices in various technical fields but lacked a theoretical basis to properly study them in their own right. And so, Thus, the Protcollege was born out of a loose group of scholars with an interest in the philosophical meta-study of scientific practice. The basis was initially in Munich but has since expanded to cover members from California all thr way to Australia. Naturally, this makes coordination a bummer, but figuring out protocols for assembling in the network age is also part of the game.
 
 
 ## Boundary Objects
 
-As we coalesced around the concept protocol, it became clear that what we actually means can be very different. Some considered protocols as operational workflows, others as recipes, and others as coordination tools. But this diversity also showed that the concept acts as an aggregator of many other related concepts and phenomena: standardization, guidelines,routinized practice, conformity, rituals, norms, bureaucracy, documentation, etc. In that way, the concept of protocol acts as a boundary object that brings knowledge, phenomena and practices from disparate social worlds closer together.
+As we coalesced around the concept protocol, it became clear that what we actually mean can be very different. Some considered protocols as operational workflows, others as recipes, and others as coordination tools. But this diversity also showed that the concept acts as an aggregator of many other related concepts and phenomena: standardization, guidelines,routinized practice, conformity, rituals, norms, bureaucracy, documentation, etc. In that way, the concept of protocol acts as a boundary object that brings knowledge, phenomena and practices from disparate social worlds closer together.
 
 ## Schools of Thought
 
