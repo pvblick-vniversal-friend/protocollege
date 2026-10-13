@@ -1,7 +1,7 @@
 {
   "name": "protocollege",
-  "version": "0.1.0",
-  "description": "Protocollege - generating proto-knowledge through proto-collage",
+  "version": "2.0",
+  "description": "Make Philosophy Boring Again",
   "scripts": {
     "build": "eleventy",
     "serve": "eleventy --serve",

@@ -1,6 +1,25 @@
 {
-  "fetched": "2026-10-04T22:17:33.213Z",
+  "fetched": "2026-10-10T12:22:21.720Z",
   "items": [
+    {
+      "key": "YIJWJL8W",
+      "title": "The problem of baselining",
+      "type": "journalArticle",
+      "typeLabel": "Journal article",
+      "year": "2026",
+      "citation": "Jones, E. (2026). The problem of baselining. <i>Biology &amp; Philosophy</i>, <i>41</i>(4), 27. https://doi.org/10.1007/s10539-026-10029-5",
+      "url": "https://doi.org/10.1007/s10539-026-10029-5",
+      "zoteroUrl": "https://www.zotero.org/groups/protocollege/items/YIJWJL8W",
+      "tags": [
+        "Baselines",
+        "Ecological change",
+        "Models",
+        "Shifting baseline syndrome",
+        "Target system",
+        "Variation"
+      ],
+      "search": "jones, e. (2026). the problem of baselining. biology & philosophy , 41 (4), 27. https://doi.org/10.1007/s10539-026-10029-5 baselines ecological change models shifting baseline syndrome target system variation"
+    },
     {
       "key": "TZYU86A5",
       "title": "Protocols: An Operating Manual for the Human Body",
@@ -318,18 +337,6 @@
       "search": "brekke, j. k., beecroft, k., & pick, f. (2021). the dissensus protocol: governing differences in online peer communities. frontiers in human dynamics , 3 . https://doi.org/10.3389/fhumd.2021.641731 blockchain dao online governance peer-to-peer governance dissensus"
     },
     {
-      "key": "CTKXBLDT",
-      "title": "Metamodernism: The Future of Theory",
-      "type": "book",
-      "typeLabel": "Book",
-      "year": "2021",
-      "citation": "Storm, J. A. J. (2021). <i>Metamodernism: The Future of Theory</i>. University of Chicago Press. https://doi.org/10.7208/chicago/9780226786797.001.0001",
-      "url": "https://www.bibliovault.org/BV.landing.epl?ISBN=9780226786797",
-      "zoteroUrl": "https://www.zotero.org/groups/protocollege/items/CTKXBLDT",
-      "tags": [],
-      "search": "storm, j. a. j. (2021). metamodernism: the future of theory . university of chicago press. https://doi.org/10.7208/chicago/9780226786797.001.0001"
-    },
-    {
       "key": "U3WXJU8N",
       "title": "Scientific Protocols as Recipes: A New Way to Look at Experimental Practice in the Life Sciences and the Hidden Philosophy Within",
       "type": "journalArticle",
@@ -532,6 +539,24 @@
       "search": "protocol analysis: methods for eliciting and analyzing valid verbal reports on thinking. (2016, august 28). https://web.archive.org/web/20160828160340/https://psy.fsu.edu/faculty/ericsson/ericsson.proto.thnk.html"
     },
     {
+      "key": "H6FSXLIY",
+      "title": "Weber's Rationalism and Modern Society: New Translations on Politics, Bureaucracy, and Social Stratification",
+      "type": "book",
+      "typeLabel": "Book",
+      "year": "2015",
+      "citation": "<i>Weber&#x2019;s Rationalism and Modern Society: New Translations on Politics, Bureaucracy, and Social Stratification</i>. (2015). Springer.",
+      "url": null,
+      "zoteroUrl": "https://www.zotero.org/groups/protocollege/items/H6FSXLIY",
+      "tags": [
+        "Business & Economics / Labor / General",
+        "Political Science / General",
+        "Social Science / Social Classes & Economic Disparity",
+        "Social Science / Sociology / General",
+        "Social Science / Sociology / Social Theory"
+      ],
+      "search": "weber’s rationalism and modern society: new translations on politics, bureaucracy, and social stratification . (2015). springer. business & economics / labor / general political science / general social science / social classes & economic disparity social science / sociology / general social science / sociology / social theory"
+    },
+    {
       "key": "YN36CJHC",
       "title": "How cells became records: standardization and infrastructure in tissue culture",
       "type": "journalArticle",
@@ -574,6 +599,41 @@
         "Values in science"
       ],
       "search": "john, s. (2015). inductive risk and the contexts of communication. synthese , 192 (1), 79–96. https://doi.org/10.1007/s11229-014-0554-7 communicative obligations inductive risk neonicitinoid research philosophy of science public/private distinction social epistemology standardization values in science"
+    },
+    {
+      "key": "KS7F6PGH",
+      "title": "Bureaucracy",
+      "type": "bookSection",
+      "typeLabel": "Book chapter",
+      "year": "2015",
+      "citation": "Waters, T., &amp; Waters, D. (2015). Bureaucracy. In T. Waters &amp; D. Waters (Eds.), <i>Weber&#x2019;s Rationalism and Modern Society: New Translations on Politics, Bureaucracy, and Social Stratification</i> (pp. 73&#x2013;127). Palgrave Macmillan US. https://doi.org/10.1057/9781137365866_6",
+      "url": "https://doi.org/10.1057/9781137365866_6",
+      "zoteroUrl": "https://www.zotero.org/groups/protocollege/items/KS7F6PGH",
+      "tags": [
+        "Bureaucratic Structure",
+        "Modern Society",
+        "Monetary Economy",
+        "Social Entity",
+        "Territorial State"
+      ],
+      "search": "waters, t., & waters, d. (2015). bureaucracy. in t. waters & d. waters (eds.), weber’s rationalism and modern society: new translations on politics, bureaucracy, and social stratification (pp. 73–127). palgrave macmillan us. https://doi.org/10.1057/9781137365866_6 bureaucratic structure modern society monetary economy social entity territorial state"
+    },
+    {
+      "key": "B8RCVHYN",
+      "title": "Weber's Rationalism and Modern Society",
+      "type": "book",
+      "typeLabel": "Book",
+      "year": "2015",
+      "citation": "Waters, T., &amp; Waters, D. (Eds.). (2015). <i>Weber&#x2019;s Rationalism and Modern Society</i>. Palgrave Macmillan US. https://doi.org/10.1057/9781137365866",
+      "url": "http://link.springer.com/10.1057/9781137365866",
+      "zoteroUrl": "https://www.zotero.org/groups/protocollege/items/B8RCVHYN",
+      "tags": [
+        "Max Weber",
+        "community",
+        "politics",
+        "sociology"
+      ],
+      "search": "waters, t., & waters, d. (eds.). (2015). weber’s rationalism and modern society . palgrave macmillan us. https://doi.org/10.1057/9781137365866 max weber community politics sociology"
     },
     {
       "key": "CKNZAZ3I",
@@ -846,15 +906,27 @@
     },
     {
       "key": "AB9ITG4K",
-      "title": "Protocols, practices, and the reproduction of technique in molecular biology*",
+      "title": "Protocols, practices, and the reproduction of technique in molecular biology",
       "type": "journalArticle",
       "typeLabel": "Journal article",
       "year": "2002",
-      "citation": "Lynch, M. (2002). Protocols, practices, and the reproduction of technique in molecular biology*. <i>The British Journal of Sociology</i>, <i>53</i>(2), 203&#x2013;220. https://doi.org/10.1080/00071310220133304",
+      "citation": "Lynch, M. (2002). Protocols, practices, and the reproduction of technique in molecular biology. <i>The British Journal of Sociology</i>, <i>53</i>(2), 203&#x2013;220. https://doi.org/10.1080/00071310220133304",
       "url": "https://onlinelibrary.wiley.com/doi/10.1080/00071310220133304",
       "zoteroUrl": "https://www.zotero.org/groups/protocollege/items/AB9ITG4K",
       "tags": [],
-      "search": "lynch, m. (2002). protocols, practices, and the reproduction of technique in molecular biology*. the british journal of sociology , 53 (2), 203–220. https://doi.org/10.1080/00071310220133304"
+      "search": "lynch, m. (2002). protocols, practices, and the reproduction of technique in molecular biology. the british journal of sociology , 53 (2), 203–220. https://doi.org/10.1080/00071310220133304"
+    },
+    {
+      "key": "LQKX9PCN",
+      "title": "Behaviour and the standardization fallacy",
+      "type": "journalArticle",
+      "typeLabel": "Journal article",
+      "year": "2000",
+      "citation": "W&#xFC;rbel, H. (2000). Behaviour and the standardization fallacy. <i>Nature Genetics</i>, <i>26</i>(3), 263&#x2013;263. https://doi.org/10.1038/81541",
+      "url": "https://www.nature.com/articles/ng1100_263",
+      "zoteroUrl": "https://www.zotero.org/groups/protocollege/items/LQKX9PCN",
+      "tags": [],
+      "search": "würbel, h. (2000). behaviour and the standardization fallacy. nature genetics , 26 (3), 263–263. https://doi.org/10.1038/81541"
     },
     {
       "key": "5C8KDPE8",
@@ -874,14 +946,14 @@
       "search": "berg, m., & timmermans, s. (2000). orders and their others: on the constitution of universalities in medical work. configurations , 8 (1), 31–61. https://muse.jhu.edu/pub/1/article/8183 philosophy of medicine protocols social studies of science standardization"
     },
     {
-      "key": "4S5APYKW",
+      "key": "UQBH6RCJ",
       "title": "The Ethnography of Infrastructure",
       "type": "journalArticle",
       "typeLabel": "Journal article",
       "year": "1999",
-      "citation": "STAR, S. L. (1999). The Ethnography of Infrastructure. <i>American Behavioral Scientist</i>, <i>43</i>(3), 377&#x2013;391. https://doi.org/10.1177/00027649921955326",
-      "url": "https://doi.org/10.1177/00027649921955326",
-      "zoteroUrl": "https://www.zotero.org/groups/protocollege/items/4S5APYKW",
+      "citation": "Star, S. L. (1999). The Ethnography of Infrastructure. <i>American Behavioral Scientist</i>, <i>43</i>(3), 377&#x2013;391. https://doi.org/10.1177/00027649921955326",
+      "url": "https://journals.sagepub.com/doi/10.1177/00027649921955326",
+      "zoteroUrl": "https://www.zotero.org/groups/protocollege/items/UQBH6RCJ",
       "tags": [],
       "search": "star, s. l. (1999). the ethnography of infrastructure. american behavioral scientist , 43 (3), 377–391. https://doi.org/10.1177/00027649921955326"
     },
@@ -1013,8 +1085,10 @@
       "citation": "Theraulaz, G., &amp; Bonabeau, E. (1995). Coordination in Distributed Building. <i>Science</i>, <i>269</i>(5224), 686&#x2013;688. https://doi.org/10.1126/science.269.5224.686",
       "url": "https://www.science.org/doi/10.1126/science.269.5224.686",
       "zoteroUrl": "https://www.zotero.org/groups/protocollege/items/Y5ZVWPDG",
-      "tags": [],
-      "search": "theraulaz, g., & bonabeau, e. (1995). coordination in distributed building. science , 269 (5224), 686–688. https://doi.org/10.1126/science.269.5224.686"
+      "tags": [
+        "stigmergy"
+      ],
+      "search": "theraulaz, g., & bonabeau, e. (1995). coordination in distributed building. science , 269 (5224), 686–688. https://doi.org/10.1126/science.269.5224.686 stigmergy"
     },
     {
       "key": "BWR7YLVC",
