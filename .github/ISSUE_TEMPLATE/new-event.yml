@@ -9,6 +9,7 @@ body:
         Submitting this form adds the event to **Upcoming Events** on [proto.college](https://proto.college) within a few minutes.
 
         - **To change or cancel an event**, submit the form again with the **same title and date**. It replaces the earlier entry.
+        - You can also skip this form and add a markdown file to `src/events/` directly, copying `src/events/_template.md`.
         - Only submissions from repository maintainers are published.
   - type: dropdown
     id: type
@@ -17,6 +18,7 @@ body:
       options:
         - Reading group
         - Working group
+        - Workshop
         - Session
         - Other
       default: 0
@@ -40,9 +42,9 @@ body:
   - type: input
     id: time
     attributes:
-      label: Start time (UTC)
-      description: "24-hour clock in UTC. For example, 15:45 UTC is 16:45 in Berlin in winter and 17:45 in summer."
-      placeholder: "15:45"
+      label: Start time (Copenhagen time)
+      description: "24-hour clock, Copenhagen/Berlin local time."
+      placeholder: "16:00"
     validations:
       required: true
   - type: input
@@ -72,8 +74,8 @@ body:
   - type: input
     id: access
     attributes:
-      label: Access note
-      description: Optional, for example a meeting password or "Registration required".
+      label: Passcode
+      description: Optional meeting passcode.
   - type: dropdown
     id: status
     attributes:

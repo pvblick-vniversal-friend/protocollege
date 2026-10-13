@@ -1,20 +1,20 @@
-{# Event cards, shared by the landing page preview and /events/.
+{# Event cards, shared by the landing page preview, /events/ and each event's
+   own page. Events come from the markdown files in src/events/.
    Rendered inside markdown, so the output must stay free of blank lines:
    markdown-it only passes it through untouched as a single HTML block. #}
 {%- set typeLabels = {
   "reading-group": "Reading group",
   "working-group": "Working group",
+  "workshop": "Workshop",
   "session": "Session",
   "other": "Event"
 } -%}
-{%- macro eventList(events, compact=false, showJoin=true) -%}
-<ul class="event-list{% if compact %} event-list-compact{% endif %}">
-{%- for event in events %}
+{%- macro eventCard(event, compact=false, showJoin=true, linkTitle=true) -%}
 <li class="event{% if event.status == 'cancelled' %} event-cancelled{% endif %}">
 <span class="tag">{{ typeLabels[event.type] or "Event" }}</span>
-{%- if event.status == "tbc" %} <span class="tag tag-muted">To be confirmed</span>{% endif %}
+{%- if event.status == "tbc" and (event | isUpcoming) %} <span class="tag tag-muted">To be confirmed</span>{% endif %}
 {%- if event.status == "cancelled" %} <span class="tag tag-muted">Cancelled</span>{% endif %}
-<h3 class="event-title">{{ event.title }}</h3>
+<h3 class="event-title">{% if linkTitle %}<a href="{{ event.url }}">{{ event.title }}</a>{% else %}{{ event.title }}{% endif %}</h3>
 {%- if event.guest %}
 <p class="event-guest">with {{ event.guest }}</p>
 {%- endif %}
@@ -34,15 +34,21 @@
 {%- endfor %}
 </ul>
 {%- endif %}
-{%- if event.status != "cancelled" %}
-{%- if showJoin and event.join %}
-<p><a class="event-join" href="{{ event.join }}" target="_blank" rel="noopener noreferrer">Join session</a></p>
-{%- endif %}
-{%- if not compact and event.pass %}
-<p class="event-pass">{{ event.pass }}</p>
+{%- if showJoin and event.status != "cancelled" %}
+<p class="event-actions">
+{%- if event.join %}<a class="event-join" href="{{ event.join }}" target="_blank" rel="noopener noreferrer">Join session</a>{% endif %}
+{%- if not compact %} <a class="event-calendar" href="{{ event | googleCalendarUrl }}" target="_blank" rel="noopener noreferrer">Add to Google Calendar</a>{% endif %}
+</p>
+{%- if not compact and (event.meetingId or event.passcode) %}
+<p class="event-pass">{% if event.meetingId %}Meeting ID: {{ event.meetingId }}{% endif %}{% if event.meetingId and event.passcode %} · {% endif %}{% if event.passcode %}Passcode: {{ event.passcode }}{% endif %}</p>
 {%- endif %}
 {%- endif %}
 </li>
+{%- endmacro -%}
+{%- macro eventList(events, compact=false, showJoin=true) -%}
+<ul class="event-list{% if compact %} event-list-compact{% endif %}">
+{%- for event in events %}
+{{ eventCard(event, compact, showJoin) }}
 {%- endfor %}
 </ul>
 {%- endmacro -%}

@@ -1,5 +1,5 @@
 # Publishes events submitted through the "New event" issue form
-# (.github/ISSUE_TEMPLATE/new-event.yml) to src/_data/schedule.json.
+# (.github/ISSUE_TEMPLATE/new-event.yml) as markdown files in src/events/.
 # Vercel rebuilds proto.college on the resulting push to main.
 name: Add event from issue
 
@@ -33,7 +33,7 @@ jobs:
         with:
           node-version: 20
 
-      - name: Update schedule.json from the form
+      - name: Write the event file from the form
         id: update
         env:
           # Passed through the environment, never interpolated into the script.
@@ -45,7 +45,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add src/_data/schedule.json
+          git add src/events
           git commit -F "$RUNNER_TEMP/event-commit-message.txt"
           git pull --rebase
           git push

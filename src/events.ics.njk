@@ -1,0 +1,5 @@
+---
+permalink: /events.ics
+eleventyExcludeFromCollections: true
+---
+{{ collections.events | toIcs(site) | safe }}

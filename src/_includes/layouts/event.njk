@@ -1,0 +1,16 @@
+---
+layout: base
+---
+{%- from "components/events.njk" import eventCard -%}
+{%- set event = collections.events | eventForPage(page.url) -%}
+<article class="regular-page event-page">
+    <p class="event-back"><a href="/events/">← All events</a></p>
+    <ul class="event-list">
+    {{ eventCard(event, showJoin=(event | isUpcoming), linkTitle=false) }}
+    </ul>
+    {%- if content | trim %}
+    <div class="page-content">
+        {{ content | safe }}
+    </div>
+    {%- endif %}
+</article>

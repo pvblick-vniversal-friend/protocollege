@@ -94,6 +94,31 @@ tags: announcement
 Content here...
 ```
 
+#### Events and sessions
+
+Each event is one markdown file in `src/events/`, named `YYYY-MM-DD-short-title.md`:
+
+1. Copy `src/events/_template.md` and rename it, for example `2026-11-13-rg-biweekly.md`.
+2. Fill in the fields at the top and delete the lines you don't need. Anything you write below the `---` appears on the event's own page.
+3. Commit to `main` (editing on github.com works too).
+
+```markdown
+---
+title: RG Biweekly
+date: 2026-11-13
+time: "16:00"        # Copenhagen time unless you add a timezone line
+end: "18:00"
+type: reading-group  # reading-group | working-group | workshop | session | other
+status: confirmed    # confirmed | tbc | cancelled
+topic: Algorithms & Distributed Networks
+join: https://...
+---
+```
+
+The next upcoming event appears on the landing page, all of them on `/events/`, and each one gets its own page. To cancel an event, set `status: cancelled` rather than deleting the file. Maintainers can also use the **New event** issue form, which writes the file for them.
+
+The schedule is published as a calendar feed at `/events.ics`, which anyone can subscribe to in Google Calendar or any other calendar app, and every event has an "Add to Google Calendar" link.
+
 #### Activities
 
 Add activities to `src/_data/activities.json` or create markdown files in `src/activities/`.

@@ -5,6 +5,8 @@ const interlinker = require("@photogabble/eleventy-plugin-interlinker");
 const pluginMermaid = require("@kevingimbel/eleventy-plugin-mermaid");
 const markdownIt = require("markdown-it");
 const markdownItAttrs = require("markdown-it-attrs");
+const events = require("./lib/events");
+const site = require("./src/_data/site.json");
 
 module.exports = function(eleventyConfig) {
   // Copy static assets
@@ -49,29 +51,34 @@ module.exports = function(eleventyConfig) {
     });
   });
 
-  // Events from src/_data/schedule.json. Upcoming = today (UTC) or later,
-  // soonest first; past = before today, most recent first.
+  // Events are the markdown files in src/events/ (copy _template.md to add one).
+  // Upcoming = today (UTC) or later, soonest first; past = before today, most
+  // recent first.
+  eleventyConfig.ignores.add("src/events/_template.md");
+
+  eleventyConfig.addCollection("events", function(collectionApi) {
+    return collectionApi.getFilteredByGlob("src/events/*.md")
+      .filter(item => !item.inputPath.endsWith("/index.md") && !item.data.draft)
+      .map(events.fromPage);
+  });
+
+  const isUpcoming = event => event.date >= DateTime.utc().toISODate();
+  eleventyConfig.addFilter("isUpcoming", isUpcoming);
+
   const byDateTime = (a, b) => `${a.date} ${a.time}`.localeCompare(`${b.date} ${b.time}`);
 
-  eleventyConfig.addFilter("upcomingEvents", (events = []) => {
-    const today = DateTime.utc().toISODate();
-    return events.filter(event => event.date >= today).sort(byDateTime);
+  eleventyConfig.addFilter("upcomingEvents", (list = []) => {
+    return list.filter(isUpcoming).sort(byDateTime);
   });
 
-  eleventyConfig.addFilter("pastEvents", (events = []) => {
-    const today = DateTime.utc().toISODate();
-    return events.filter(event => event.date < today).sort((a, b) => byDateTime(b, a));
+  eleventyConfig.addFilter("pastEvents", (list = []) => {
+    return list.filter(event => !isUpcoming(event)).sort((a, b) => byDateTime(b, a));
   });
 
-  // "Fri 25 Sep 2026 · 16:45–18:02 (UTC+1)"
-  eleventyConfig.addFilter("eventWhen", (event) => {
-    const start = DateTime.fromISO(`${event.date}T${event.time || "00:00"}`, { zone: "utc" });
-    const day = start.toFormat("ccc d LLL yyyy");
-    if (!event.time) return day;
-    let when = `${day} · ${start.toFormat("HH:mm")}`;
-    if (event.duration) when += `–${start.plus({ minutes: event.duration }).toFormat("HH:mm")}`;
-    return `${when} (${event.timezone || "UTC"})`;
-  });
+  eleventyConfig.addFilter("eventForPage", (list = [], url) => list.find(event => event.url === url));
+  eleventyConfig.addFilter("eventWhen", events.when);
+  eleventyConfig.addFilter("googleCalendarUrl", event => events.googleCalendarUrl(event, site.url));
+  eleventyConfig.addFilter("toIcs", events.toIcs);
 
   // Collections
   eleventyConfig.addCollection("blog", function(collectionApi) {

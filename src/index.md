@@ -21,9 +21,9 @@ branches:
 ## Upcoming Events
 
 {% from "components/events.njk" import eventList -%} 
-{% set upcoming = schedule.events | upcomingEvents -%}
+{% set upcoming = collections.events | upcomingEvents -%}
 {% if upcoming.length -%}
-{{ eventList(upcoming.slice(0, 2), compact=true) }}
+{{ eventList(upcoming.slice(0, 1), compact=true) }}
 
 [All events →](/events/)
 {%- else -%}

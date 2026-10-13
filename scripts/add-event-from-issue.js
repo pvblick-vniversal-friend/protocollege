@@ -1,21 +1,23 @@
 #!/usr/bin/env node
-// Turns a "New event" issue form (.github/ISSUE_TEMPLATE/new-event.yml) into an
-// entry in src/_data/schedule.json. Run by .github/workflows/add-event.yml with
-// the issue body in ISSUE_BODY.
+// Turns a "New event" issue form (.github/ISSUE_TEMPLATE/new-event.yml) into a
+// markdown file in src/events/. Run by .github/workflows/add-event.yml with the
+// issue body in ISSUE_BODY.
 //
-// An existing event with the same title and date is replaced, so submitting the
-// form again edits or cancels an event.
+// An event with the same title and date has the same file name, so submitting
+// the form again edits or cancels it. Its description below the front matter is
+// kept.
 
 const fs = require("fs");
 const os = require("os");
 const path = require("path");
 
-const SCHEDULE_PATH = path.join(__dirname, "..", "src", "_data", "schedule.json");
+const EVENTS_DIR = path.join(__dirname, "..", "src", "events");
 const OUT_DIR = process.env.RUNNER_TEMP || os.tmpdir();
 
 const TYPES = {
   "Reading group": "reading-group",
   "Working group": "working-group",
+  "Workshop": "workshop",
   "Session": "session",
   "Other": "other",
 };
@@ -62,12 +64,12 @@ function buildEvent(fields) {
   const date = field("Date");
   if (!isValidDate(date)) errors.push(`**Date** \`${date}\` must be a real date written as YYYY-MM-DD, like 2026-10-07.`);
 
-  let time = field("Start time (UTC)").replace(/\s*utc$/i, "");
+  let time = field("Start time (Copenhagen time)");
   const timeMatch = time.match(/^(\d{1,2})[:.](\d{2})$/);
   if (timeMatch && Number(timeMatch[1]) < 24 && Number(timeMatch[2]) < 60) {
     time = `${timeMatch[1].padStart(2, "0")}:${timeMatch[2]}`;
   } else {
-    errors.push(`**Start time (UTC)** \`${time}\` must be a 24-hour time like 15:45.`);
+    errors.push(`**Start time (Copenhagen time)** \`${time}\` must be a 24-hour time like 16:00.`);
   }
 
   let duration;
@@ -94,22 +96,42 @@ function buildEvent(fields) {
     if (!url || url.protocol !== "https:") errors.push(`**Join link** \`${link}\` must be a full https:// address.`);
   }
 
-  const access = singleLine("Access note", 200);
+  const passcode = singleLine("Passcode", 100);
 
   const status = STATUSES[field("Status")];
   if (!status) errors.push(`**Status** must be one of: ${Object.keys(STATUSES).join(", ")}.`);
 
   if (errors.length) return { errors };
 
-  // Same key order as the existing entries in schedule.json; empty fields are left out.
-  const event = { type, title, date, time };
+  // Same field names and order as src/events/_template.md; empty fields are left out.
+  const event = { title, date, time };
   if (duration) event.duration = duration;
+  event.type = type;
+  event.status = status;
   if (topic) event.topic = topic;
   if (readings.length) event.readings = readings;
-  if (link) event.link = link;
-  if (access) event.access = access;
-  event.status = status;
+  if (link) event.join = link;
+  if (passcode) event.passcode = passcode;
   return { event };
+}
+
+const slugify = text => text.toLowerCase().normalize("NFKD").replace(/[\u0300-\u036f]/g, "")
+  .replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "").slice(0, 60) || "event";
+
+// Every value is written as a JSON string, which YAML reads back unchanged.
+function frontMatter(event) {
+  const lines = ["---"];
+  for (const [key, value] of Object.entries(event)) {
+    if (Array.isArray(value)) {
+      lines.push(`${key}:`, ...value.map(item => `  - ${JSON.stringify(item)}`));
+    } else if (key === "date" || key === "duration") {
+      lines.push(`${key}: ${value}`);
+    } else {
+      lines.push(`${key}: ${JSON.stringify(value)}`);
+    }
+  }
+  lines.push("---");
+  return lines.join("\n") + "\n";
 }
 
 function writeOutputs({ changed, comment, commitMessage }) {
@@ -135,35 +157,29 @@ function main() {
     process.exit(1);
   }
 
-  const before = fs.readFileSync(SCHEDULE_PATH, "utf8");
-  const schedule = JSON.parse(before);
-  schedule.events = schedule.events || [];
-
-  const existing = schedule.events.findIndex(
-    e => e.date === event.date && e.title.toLowerCase() === event.title.toLowerCase()
-  );
-  if (existing >= 0) schedule.events[existing] = event;
-  else schedule.events.push(event);
-  schedule.events.sort((a, b) => `${a.date} ${a.time}`.localeCompare(`${b.date} ${b.time}`));
-
-  const after = JSON.stringify(schedule, null, 2) + "\n";
+  const file = path.join(EVENTS_DIR, `${event.date}-${slugify(event.title)}.md`);
+  const relative = path.relative(path.join(__dirname, ".."), file);
+  const exists = fs.existsSync(file);
+  const before = exists ? fs.readFileSync(file, "utf8") : "";
+  const body = before.replace(/^---\n[\s\S]*?\n---\n?/, "");
+  const after = frontMatter(event) + body;
   const changed = after !== before;
-  const verb = existing < 0 ? "Add" : event.status === "cancelled" ? "Cancel" : "Update";
+  const verb = !exists ? "Add" : event.status === "cancelled" ? "Cancel" : "Update";
   const issue = process.env.ISSUE_NUMBER ? ` from #${process.env.ISSUE_NUMBER}` : "";
 
-  if (changed) fs.writeFileSync(SCHEDULE_PATH, after);
+  if (changed) fs.writeFileSync(file, after);
 
   writeOutputs({
     changed,
     commitMessage: changed && `${verb} event: ${event.title} (${event.date})\n\nSubmitted through the New event form${issue}.\n`,
     comment: changed
       ? [
-          `${verb === "Add" ? "Added" : verb === "Cancel" ? "Cancelled" : "Updated"} **${event.title}** on ${event.date} at ${event.time} UTC in \`src/_data/schedule.json\`.`,
+          `${verb === "Add" ? "Added" : verb === "Cancel" ? "Cancelled" : "Updated"} **${event.title}** on ${event.date} at ${event.time} (Copenhagen time) in \`${relative}\`. Add a longer description below the front matter in that file if you like.`,
           "",
           "It will show on https://proto.college once the site has rebuilt, usually within a few minutes.",
           "",
-          "```json",
-          JSON.stringify(event, null, 2),
+          "```yaml",
+          frontMatter(event).trim(),
           "```",
         ].join("\n")
       : `**${event.title}** on ${event.date} is already on the schedule with these details, so nothing changed.`,
