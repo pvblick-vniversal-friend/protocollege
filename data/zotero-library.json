@@ -1,5 +1,5 @@
 {
-  "fetched": "2026-10-10T12:22:21.720Z",
+  "fetched": "2026-11-08T12:28:25.120Z",
   "items": [
     {
       "key": "YIJWJL8W",
@@ -39,6 +39,21 @@
       "search": "huberman, a. d. (2026). protocols: an operating manual for the human body . s&s/simon element. health & fitness / aging & longevity health & fitness / sleep science / life sciences / human anatomy & physiology science / life sciences / neuroscience self-help / self-management / stress management"
     },
     {
+      "key": "DT8GDTXJ",
+      "title": "Varying protocols to generate comparable models",
+      "type": "manuscript",
+      "typeLabel": "Manuscript",
+      "year": "2026",
+      "citation": "Yoshida, Y. (2026). <i>Varying protocols to generate comparable models</i> [Unpublished manuscript].",
+      "url": null,
+      "zoteroUrl": "https://www.zotero.org/groups/protocollege/items/DT8GDTXJ",
+      "tags": [
+        "PROTOCOLLEGE",
+        "drafts"
+      ],
+      "search": "yoshida, y. (2026). varying protocols to generate comparable models [unpublished manuscript]. protocollege drafts"
+    },
+    {
       "key": "JINPJLJP",
       "title": "Protocols and Institutions",
       "type": "preprint",
@@ -58,6 +73,18 @@
         "Protocols"
       ],
       "search": "zargham, m., & ben-meir, i. (2025). protocols and institutions . zenodo. https://doi.org/10.5281/zenodo.15116453 control theory control systems cybernetics institutional practice/economics institutions internet protocols market design protocols"
+    },
+    {
+      "key": "BI32KUFH",
+      "title": "Protocol Reader - Summer of Protocols",
+      "type": "book",
+      "typeLabel": "Book",
+      "year": "2025",
+      "citation": "Rao, V., Beiko, T., &amp; Davis, J. (2025). <i>Protocol Reader - Summer of Protocols</i> (1st ed.).",
+      "url": null,
+      "zoteroUrl": "https://www.zotero.org/groups/protocollege/items/BI32KUFH",
+      "tags": [],
+      "search": "rao, v., beiko, t., & davis, j. (2025). protocol reader - summer of protocols (1st ed.)."
     },
     {
       "key": "3V8LWQN6",
@@ -123,18 +150,6 @@
       "search": "veigl, s. j., & currie, a. (2025). methods in the philosophy of science: a user’s guide . mit press."
     },
     {
-      "key": "BI32KUFH",
-      "title": "Protocol Reader - Summer of Protocols",
-      "type": "book",
-      "typeLabel": "Book",
-      "year": "2025",
-      "citation": "Venkatesh, R., Beiko, T., &amp; Davis, J. (2025). <i>Protocol Reader - Summer of Protocols</i> (1st ed.).",
-      "url": null,
-      "zoteroUrl": "https://www.zotero.org/groups/protocollege/items/BI32KUFH",
-      "tags": [],
-      "search": "venkatesh, r., beiko, t., & davis, j. (2025). protocol reader - summer of protocols (1st ed.)."
-    },
-    {
       "key": "N5BZUNCS",
       "title": "‘The Discipline of Steel’: Technical Knowledge in the Coordinative Practices of Steelmaking",
       "type": "journalArticle",
@@ -193,6 +208,50 @@
         "Sociology of standardisation"
       ],
       "search": "smolka, m. (2023). making epistemic goods compatible: knowledge-making practices in a lifestyle intervention rct on mindfulness and compassion meditation. biosocieties , 18 (2), 359–388. https://doi.org/10.1057/s41292-022-00272-w comparative methods empirical ethics evidence health promotion knowledge-making practices philosophy of psychology philosophy of science rct randomised controlled clinical trial social studies of science sociology of standardisation"
+    },
+    {
+      "key": "8YK62CRG",
+      "title": "What is the “modified” CTAB protocol? Characterizing modifications to the CTAB DNA extraction protocol",
+      "type": "journalArticle",
+      "typeLabel": "Journal article",
+      "year": "2023",
+      "citation": "Schenk, J. J., Becklund, L. E., Carey, S. J., &amp; Fabre, P. P. (2023). What is the &#x201C;modified&#x201D; CTAB protocol? Characterizing modifications to the CTAB DNA extraction protocol. <i>Applications in Plant Sciences</i>, <i>11</i>(3), e11517. https://doi.org/10.1002/aps3.11517",
+      "url": "https://onlinelibrary.wiley.com/doi/abs/10.1002/aps3.11517",
+      "zoteroUrl": "https://www.zotero.org/groups/protocollege/items/8YK62CRG",
+      "tags": [
+        "DNA extraction",
+        "cell lysis",
+        "cetyltrimethylammonium bromide (CTAB)",
+        "high-throughput sequencing",
+        "molecular biology",
+        "molecular systematics",
+        "plant genetics"
+      ],
+      "search": "schenk, j. j., becklund, l. e., carey, s. j., & fabre, p. p. (2023). what is the “modified” ctab protocol? characterizing modifications to the ctab dna extraction protocol. applications in plant sciences , 11 (3), e11517. https://doi.org/10.1002/aps3.11517 dna extraction cell lysis cetyltrimethylammonium bromide (ctab) high-throughput sequencing molecular biology molecular systematics plant genetics"
+    },
+    {
+      "key": "8JUNBCH6",
+      "title": "Protocols for postcapitalist expression: agency, finance and sociality in the new economic space",
+      "type": "book",
+      "typeLabel": "Book",
+      "year": "2023",
+      "citation": "Bryan, D., L&#xF3;pez, J., &amp; Virtanen, A. (2023). <i>Protocols for postcapitalist expression: agency, finance and sociality in the new economic space</i>. Minor Compositions.",
+      "url": null,
+      "zoteroUrl": "https://www.zotero.org/groups/protocollege/items/8JUNBCH6",
+      "tags": [],
+      "search": "bryan, d., lópez, j., & virtanen, a. (2023). protocols for postcapitalist expression: agency, finance and sociality in the new economic space . minor compositions."
+    },
+    {
+      "key": "W9IS9KLJ",
+      "title": "The Unreasonable Sufficiency of Protocols",
+      "type": "journalArticle",
+      "typeLabel": "Journal article",
+      "year": "2023",
+      "citation": "Rao, V., Beiko, T., Ryan, D., Stark, J., Epps, T. V., &amp; Aue, B. (2023). <i>The Unreasonable Sufficiency of Protocols</i>.",
+      "url": null,
+      "zoteroUrl": "https://www.zotero.org/groups/protocollege/items/W9IS9KLJ",
+      "tags": [],
+      "search": "rao, v., beiko, t., ryan, d., stark, j., epps, t. v., & aue, b. (2023). the unreasonable sufficiency of protocols ."
     },
     {
       "key": "RZ3QC8V9",
@@ -305,6 +364,18 @@
         "democratization"
       ],
       "search": "nguyen, c. t. (2021). transparency is surveillance. philosophy and phenomenological research , phpr.12823. https://doi.org/10.1111/phpr.12823 democratization"
+    },
+    {
+      "key": "JH29HVLS",
+      "title": "CTAB genomic DNA-extraction",
+      "type": "journalArticle",
+      "typeLabel": "Journal article",
+      "year": "2021",
+      "citation": "Burgis, M. (2021). <i>CTAB genomic DNA-extraction</i>. https://www.protocols.io/view/ctab-genomic-dna-extraction-14egnzobmg5d/v1",
+      "url": "https://www.protocols.io/view/ctab-genomic-dna-extraction-14egnzobmg5d/v1",
+      "zoteroUrl": "https://www.zotero.org/groups/protocollege/items/JH29HVLS",
+      "tags": [],
+      "search": "burgis, m. (2021). ctab genomic dna-extraction . https://www.protocols.io/view/ctab-genomic-dna-extraction-14egnzobmg5d/v1"
     },
     {
       "key": "2M8CVU87",
@@ -497,6 +568,18 @@
         "evan"
       ],
       "search": "kera, d. (2017). science artisans and open science hardware. bulletin of science, technology & society , 37 (2), 97–111. https://doi.org/10.1177/0270467618774978 evan"
+    },
+    {
+      "key": "9TX4D2QU",
+      "title": "A Community of Relations: Mukurtu Hubs and Spokes",
+      "type": "journalArticle",
+      "typeLabel": "Journal article",
+      "year": "2017",
+      "citation": "Christen, K., Merrill, A., &amp; Wynne, M. (2017). A Community of Relations: Mukurtu Hubs and Spokes. <i>D-Lib Magazine</i>, <i>23</i>(5/6). https://doi.org/10.1045/may2017-christen",
+      "url": "http://www.dlib.org/dlib/may17/christen/05christen.html",
+      "zoteroUrl": "https://www.zotero.org/groups/protocollege/items/9TX4D2QU",
+      "tags": [],
+      "search": "christen, k., merrill, a., & wynne, m. (2017). a community of relations: mukurtu hubs and spokes. d-lib magazine , 23 (5/6). https://doi.org/10.1045/may2017-christen"
     },
     {
       "key": "I7X969QB",
@@ -775,6 +858,18 @@
       "search": "ottinger, g. (2010). buckets of resistance: standards and the effectiveness of citizen science. science, technology, & human values , 35 (2), 244–270. https://doi.org/10.1177/0162243909337121 citizen science evan standardization standardss"
     },
     {
+      "key": "V38VICMP",
+      "title": "This is Not a Boundary Object: Reflections on the Origin of a Concept",
+      "type": "journalArticle",
+      "typeLabel": "Journal article",
+      "year": "2010",
+      "citation": "Leigh Star, S. (2010). This is Not a Boundary Object: Reflections on the Origin of a Concept. <i>Science, Technology, &amp; Human Values</i>, <i>35</i>(5), 601&#x2013;617. https://doi.org/10.1177/0162243910377624",
+      "url": "https://journals.sagepub.com/doi/10.1177/0162243910377624",
+      "zoteroUrl": "https://www.zotero.org/groups/protocollege/items/V38VICMP",
+      "tags": [],
+      "search": "leigh star, s. (2010). this is not a boundary object: reflections on the origin of a concept. science, technology, & human values , 35 (5), 601–617. https://doi.org/10.1177/0162243910377624"
+    },
+    {
       "key": "UM68G5W3",
       "title": "The gold standard: the challenge of evidence-based medicine",
       "type": "book",
@@ -872,6 +967,18 @@
       "zoteroUrl": "https://www.zotero.org/groups/protocollege/items/4JYMY44A",
       "tags": [],
       "search": "gerson, e. m. (2008). reach, bracket, and the limits of rationalized coordination: some challenges for cscw. in resources, co-evolution and artifacts (pp. 193–220). springer london. https://doi.org/10.1007/978-1-84628-901-9_8"
+    },
+    {
+      "key": "68IMVEKW",
+      "title": "Protocols for Native American Archival Materials",
+      "type": "journalArticle",
+      "typeLabel": "Journal article",
+      "year": "2006",
+      "citation": "Underhill, K. J. (2006). Protocols for Native American Archival Materials. <i>RBM: A Journal of Rare Books, Manuscripts, and Cultural Heritage</i>, <i>7</i>(2), 134&#x2013;145. https://doi.org/10.5860/rbm.7.2.267",
+      "url": "http://rbm.acrl.org/index.php/rbm/article/view/267",
+      "zoteroUrl": "https://www.zotero.org/groups/protocollege/items/68IMVEKW",
+      "tags": [],
+      "search": "underhill, k. j. (2006). protocols for native american archival materials. rbm: a journal of rare books, manuscripts, and cultural heritage , 7 (2), 134–145. https://doi.org/10.5860/rbm.7.2.267"
     },
     {
       "key": "KP77YC5F",
@@ -980,6 +1087,18 @@
       "zoteroUrl": "https://www.zotero.org/groups/protocollege/items/SRYUXCS8",
       "tags": [],
       "search": "feist, g. j., & gorman, m. e. (1998). the psychology of science: review and integration of a nascent discipline. review of general psychology , 2 (1), 3–47. https://doi.org/10.1037/1089-2680.2.1.3"
+    },
+    {
+      "key": "CDUM5KL4",
+      "title": "The Dissemination, Standardization and Routinization of a Molecular Biological Technique",
+      "type": "journalArticle",
+      "typeLabel": "Journal article",
+      "year": "1998",
+      "citation": "Jordan, K., &amp; Lynch, M. (1998). The Dissemination, Standardization and Routinization of a Molecular Biological Technique. <i>Social Studies of Science</i>, <i>28</i>(5&#x2013;6), 773&#x2013;800. https://doi.org/10.1177/030631298028005005",
+      "url": "https://journals.sagepub.com/doi/10.1177/030631298028005005",
+      "zoteroUrl": "https://www.zotero.org/groups/protocollege/items/CDUM5KL4",
+      "tags": [],
+      "search": "jordan, k., & lynch, m. (1998). the dissemination, standardization and routinization of a molecular biological technique. social studies of science , 28 (5–6), 773–800. https://doi.org/10.1177/030631298028005005"
     },
     {
       "key": "S9UFULB5",
@@ -1132,6 +1251,18 @@
       "search": "winograd, t. (1993). categories, disciplines, and social coordination. computer supported cooperative work (cscw) , 2 (3), 191–197. https://doi.org/10.1007/bf00749016"
     },
     {
+      "key": "UX6YNUJ3",
+      "title": "The Strength of Loose Concepts — Boundary Concepts, Federative Experimental Strategies and Disciplinary Growth: The Case of Immunology",
+      "type": "journalArticle",
+      "typeLabel": "Journal article",
+      "year": "1992",
+      "citation": "L&#xF6;wy, I. (1992). The Strength of Loose Concepts &#x2014; Boundary Concepts, Federative Experimental Strategies and Disciplinary Growth: The Case of Immunology. <i>History of Science</i>, <i>30</i>(4), 371&#x2013;396. https://doi.org/10.1177/007327539203000402",
+      "url": "https://doi.org/10.1177/007327539203000402",
+      "zoteroUrl": "https://www.zotero.org/groups/protocollege/items/UX6YNUJ3",
+      "tags": [],
+      "search": "löwy, i. (1992). the strength of loose concepts — boundary concepts, federative experimental strategies and disciplinary growth: the case of immunology. history of science , 30 (4), 371–396. https://doi.org/10.1177/007327539203000402"
+    },
+    {
       "key": "KCS9QH8T",
       "title": "Method: measurement – ordinary and scientific measurement as ethnomethodological phenomena",
       "type": "bookSection",
@@ -1196,6 +1327,18 @@
       "search": "strauss, a. (1988). the articulation of project work: an organizational process. the sociological quarterly , 29 (2), 163–178. https://doi.org/10.1111/j.1533-8525.1988.tb01249.x"
     },
     {
+      "key": "3PDWMJ57",
+      "title": "Laboratory Life: The Construction of Scientific Facts",
+      "type": "book",
+      "typeLabel": "Book",
+      "year": "1987",
+      "citation": "Latour, B., &amp; Woolgar, S. (1987). <i>Laboratory Life: The Construction of Scientific Facts</i> (J. Salk, Ed.). Princeton University Press. https://doi.org/10.1515/9781400820412",
+      "url": "https://www.degruyterbrill.com/document/doi/10.1515/9781400820412/html",
+      "zoteroUrl": "https://www.zotero.org/groups/protocollege/items/3PDWMJ57",
+      "tags": [],
+      "search": "latour, b., & woolgar, s. (1987). laboratory life: the construction of scientific facts (j. salk, ed.). princeton university press. https://doi.org/10.1515/9781400820412"
+    },
+    {
       "key": "ERJ24YYV",
       "title": "Analyzing due process in the workplace",
       "type": "journalArticle",
@@ -1208,6 +1351,18 @@
       "search": "gerson, e. m., & star, s. l. (1986). analyzing due process in the workplace. acm transactions on information systems , 4 (3), 257–270. https://doi.org/10.1145/214427.214431"
     },
     {
+      "key": "X9C93NGV",
+      "title": "Labory Life. The Social Construction of Scientific Facts",
+      "type": "journalArticle",
+      "typeLabel": "Journal article",
+      "year": "1983",
+      "citation": "Adenot, D., Latour, B., &amp; Woolgar, S. (1983). Labory Life. The Social Construction of Scientific Facts. <i>Revue Fran&#xE7;aise de Sociologie</i>, <i>24</i>(1), 156. https://doi.org/10.2307/3321794",
+      "url": "https://www.jstor.org/stable/3321794?origin=crossref",
+      "zoteroUrl": "https://www.zotero.org/groups/protocollege/items/X9C93NGV",
+      "tags": [],
+      "search": "adenot, d., latour, b., & woolgar, s. (1983). labory life. the social construction of scientific facts. revue française de sociologie , 24 (1), 156. https://doi.org/10.2307/3321794"
+    },
+    {
       "key": "6GAZF5EH",
       "title": "Is the Scientific Paper Fraudulent? Yes; It Misrepresents Scientific Thought",
       "type": "webpage",
@@ -1218,6 +1373,114 @@
       "zoteroUrl": "https://www.zotero.org/groups/protocollege/items/6GAZF5EH",
       "tags": [],
       "search": "medawar, p. b. (1978). is the scientific paper fraudulent? yes; it misrepresents scientific thought . eweb:21512. https://repository.library.georgetown.edu/handle/10822/779420"
+    },
+    {
+      "key": "ZMVQA54T",
+      "title": "Mirror-Image Twins: The Communities of Science and Technology in 19th-Century America",
+      "type": "journalArticle",
+      "typeLabel": "Journal article",
+      "year": "1971",
+      "citation": "Layton, E. (1971). Mirror-Image Twins: The Communities of Science and Technology in 19th-Century America. <i>Technology and Culture</i>, <i>12</i>(4), 562. https://doi.org/10.2307/3102571",
+      "url": "https://www.jstor.org/stable/3102571?origin=crossref",
+      "zoteroUrl": "https://www.zotero.org/groups/protocollege/items/ZMVQA54T",
+      "tags": [],
+      "search": "layton, e. (1971). mirror-image twins: the communities of science and technology in 19th-century america. technology and culture , 12 (4), 562. https://doi.org/10.2307/3102571"
+    },
+    {
+      "key": "H2CTJFTW",
+      "title": "Mirror-Image Twins: The Communities of Science and Technology in 19th-Century America",
+      "type": "journalArticle",
+      "typeLabel": "Journal article",
+      "year": "1971",
+      "citation": "Layton, E. (1971). Mirror-Image Twins: The Communities of Science and Technology in 19th-Century America. <i>Technology and Culture</i>, <i>12</i>(4), 562. https://doi.org/10.2307/3102571",
+      "url": "https://www.jstor.org/stable/3102571?origin=crossref",
+      "zoteroUrl": "https://www.zotero.org/groups/protocollege/items/H2CTJFTW",
+      "tags": [],
+      "search": "layton, e. (1971). mirror-image twins: the communities of science and technology in 19th-century america. technology and culture , 12 (4), 562. https://doi.org/10.2307/3102571"
+    },
+    {
+      "key": "MFMZMQ8P",
+      "title": "The Unreasonable Sufficiency of Protocols",
+      "type": "blogPost",
+      "typeLabel": "Blog post",
+      "year": null,
+      "citation": "The Unreasonable Sufficiency of Protocols. (n.d.). <i>LIBRARYSTACK</i>. Retrieved November 3, 2026, from https://www.librarystack.org/unreasonable-sufficiency-of-protocols-the/",
+      "url": "https://www.librarystack.org/unreasonable-sufficiency-of-protocols-the/",
+      "zoteroUrl": "https://www.zotero.org/groups/protocollege/items/MFMZMQ8P",
+      "tags": [],
+      "search": "the unreasonable sufficiency of protocols. (n.d.). librarystack . retrieved november 3, 2026, from https://www.librarystack.org/unreasonable-sufficiency-of-protocols-the/"
+    },
+    {
+      "key": "M5FTXXS3",
+      "title": "Create a Community and Initial Cultural Protocol - Mukurtu User Manual",
+      "type": "webpage",
+      "typeLabel": "Web page",
+      "year": null,
+      "citation": "<i>Create a Community and Initial Cultural Protocol - Mukurtu User Manual</i>. (n.d.). Retrieved November 2, 2026, from https://docs.mukurtu.org/communities-cultural-protocols-categories/CreateACommunityAndInitialCulturalProtocol/",
+      "url": "https://docs.mukurtu.org/communities-cultural-protocols-categories/CreateACommunityAndInitialCulturalProtocol/",
+      "zoteroUrl": "https://www.zotero.org/groups/protocollege/items/M5FTXXS3",
+      "tags": [],
+      "search": "create a community and initial cultural protocol - mukurtu user manual . (n.d.). retrieved november 2, 2026, from https://docs.mukurtu.org/communities-cultural-protocols-categories/createacommunityandinitialculturalprotocol/"
+    },
+    {
+      "key": "YCC9SHEA",
+      "title": "Understanding Communities and Cultural Protocols - Mukurtu User Manual",
+      "type": "webpage",
+      "typeLabel": "Web page",
+      "year": null,
+      "citation": "<i>Understanding Communities and Cultural Protocols - Mukurtu User Manual</i>. (n.d.). Retrieved November 2, 2026, from https://docs.mukurtu.org/communities-cultural-protocols-categories/",
+      "url": "https://docs.mukurtu.org/communities-cultural-protocols-categories/",
+      "zoteroUrl": "https://www.zotero.org/groups/protocollege/items/YCC9SHEA",
+      "tags": [],
+      "search": "understanding communities and cultural protocols - mukurtu user manual . (n.d.). retrieved november 2, 2026, from https://docs.mukurtu.org/communities-cultural-protocols-categories/"
+    },
+    {
+      "key": "TE6K5KH2",
+      "title": "About | Mukurtu CMS",
+      "type": "blogPost",
+      "typeLabel": "Blog post",
+      "year": null,
+      "citation": "<i>About | Mukurtu CMS</i>. (n.d.). Retrieved November 2, 2026, from https://mukurtu.org/about/",
+      "url": "https://mukurtu.org/about/",
+      "zoteroUrl": "https://www.zotero.org/groups/protocollege/items/TE6K5KH2",
+      "tags": [],
+      "search": "about | mukurtu cms . (n.d.). retrieved november 2, 2026, from https://mukurtu.org/about/"
+    },
+    {
+      "key": "9WHRWDQ6",
+      "title": "(PDF) Protocols for Native American Archival Materials",
+      "type": "journalArticle",
+      "typeLabel": "Journal article",
+      "year": null,
+      "citation": "(PDF) Protocols for Native American Archival Materials. (n.d.). <i>ResearchGate</i>. https://doi.org/10.5860/rbm.7.2.267",
+      "url": "https://www.researchgate.net/publication/277834348_Protocols_for_Native_American_Archival_Materials",
+      "zoteroUrl": "https://www.zotero.org/groups/protocollege/items/9WHRWDQ6",
+      "tags": [],
+      "search": "(pdf) protocols for native american archival materials. (n.d.). researchgate . https://doi.org/10.5860/rbm.7.2.267"
+    },
+    {
+      "key": "97AN4YHR",
+      "title": "Untitled",
+      "type": "note",
+      "typeLabel": "Reference",
+      "year": null,
+      "citation": "<i>PSA Session</i>. (n.d.).",
+      "url": null,
+      "zoteroUrl": "https://www.zotero.org/groups/protocollege/items/97AN4YHR",
+      "tags": [],
+      "search": "psa session . (n.d.)."
+    },
+    {
+      "key": "D2UFVVI6",
+      "title": "PSA2026_protocol_symposium",
+      "type": "attachment",
+      "typeLabel": "Reference",
+      "year": null,
+      "citation": "<i>PSA2026_protocol_symposium</i>. (n.d.).",
+      "url": null,
+      "zoteroUrl": "https://www.zotero.org/groups/protocollege/items/D2UFVVI6",
+      "tags": [],
+      "search": "psa2026_protocol_symposium . (n.d.)."
     },
     {
       "key": "MWH2LCLH",
@@ -1242,21 +1505,6 @@
       "zoteroUrl": "https://www.zotero.org/groups/protocollege/items/9IHWVSLM",
       "tags": [],
       "search": "wrap-boundary-work-groups-occupations-organizations-nicolini-2019.pdf . (n.d.). retrieved july 24, 2026, from https://wrap.warwick.ac.uk/id/eprint/117503/1/wrap-boundary-work-groups-occupations-organizations-nicolini-2019.pdf"
-    },
-    {
-      "key": "DT8GDTXJ",
-      "title": "Varying protocols to generate comparable models",
-      "type": "manuscript",
-      "typeLabel": "Manuscript",
-      "year": null,
-      "citation": "Yoshida, Y. (n.d.). <i>Varying protocols to generate comparable models</i> [Unpublished manuscript].",
-      "url": null,
-      "zoteroUrl": "https://www.zotero.org/groups/protocollege/items/DT8GDTXJ",
-      "tags": [
-        "PROTOCOLLEGE",
-        "drafts"
-      ],
-      "search": "yoshida, y. (n.d.). varying protocols to generate comparable models [unpublished manuscript]. protocollege drafts"
     },
     {
       "key": "SJJ3LNCH",

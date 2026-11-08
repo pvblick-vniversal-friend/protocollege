@@ -1,6 +1,17 @@
 {
-  "fetched": "2026-10-02T20:05:06.324Z",
+  "fetched": "2026-11-08T12:28:20.479Z",
   "recordings": [
+    {
+      "identifier": "protocollege-15",
+      "title": "PROTOCOLLEGE #15 | RG w/ Fotis Tsiroukis",
+      "label": "#15",
+      "kind": "rg",
+      "date": "2026-10-16",
+      "dateLabel": "16 Oct 2026",
+      "summary": "In our next Protocollege meeting on the 16th of October, we will discuss Fotis' manuscript for Social Studies of Science : “ Cultures of Protocols .”",
+      "url": "https://archive.org/details/protocollege-15",
+      "embedUrl": "https://archive.org/embed/protocollege-15"
+    },
     {
       "identifier": "protocollege-14",
       "title": "PROTOCOLLEGE #14 | RG w/ Sabina Leonelli",

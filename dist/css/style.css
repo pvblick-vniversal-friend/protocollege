@@ -996,6 +996,79 @@ hr {
     color: var(--color-text-light);
 }
 
+/* Events (src/events/) */
+.event-list {
+    list-style: none;
+    margin: 0 0 calc(var(--spacing-unit) * 1.5);
+    padding: 0;
+    display: grid;
+    gap: var(--spacing-unit);
+}
+
+.event {
+    padding: calc(var(--spacing-unit) * 1.25);
+    border: 1px solid var(--color-border);
+    border-left: 4px solid var(--card-gold);
+    border-radius: var(--border-radius);
+    text-align: left;
+}
+
+.event p {
+    margin: 0.25rem 0;
+}
+
+.event-title {
+    margin: 0.5rem 0 0.25rem;
+    font-size: 1.25rem;
+}
+
+.event-title a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.event-title a:hover {
+    color: var(--color-primary);
+}
+
+.event-when,
+.event-guest,
+.event-pass {
+    color: var(--color-text-light);
+}
+
+.event-label {
+    font-weight: 600;
+}
+
+.event-readings {
+    margin: 0.25rem 0;
+    padding-left: 1.25rem;
+}
+
+.event-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1rem;
+}
+
+.event-actions:empty {
+    display: none;
+}
+
+.event-join {
+    font-weight: 600;
+}
+
+.event-cancelled .event-title,
+.event-cancelled .event-when {
+    text-decoration: line-through;
+}
+
+.event-back {
+    margin-bottom: var(--spacing-unit);
+}
+
 /* Library */
 [hidden] {
     display: none !important;
