@@ -176,7 +176,7 @@ function main() {
       ? [
           `${verb === "Add" ? "Added" : verb === "Cancel" ? "Cancelled" : "Updated"} **${event.title}** on ${event.date} at ${event.time} (Copenhagen time) in \`${relative}\`. Add a longer description below the front matter in that file if you like.`,
           "",
-          "It will show on https://proto.college once the site has rebuilt, usually within a few minutes.",
+          "It will show on https://protocollege.org once the site has rebuilt, usually within a few minutes.",
           "",
           "```yaml",
           frontMatter(event).trim(),

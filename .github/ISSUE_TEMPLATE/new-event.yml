@@ -1,12 +1,12 @@
 name: New event
-description: Add, change or cancel an event on the proto.college schedule
+description: Add, change or cancel an event on the protocollege.org schedule
 title: "[Event]: "
 labels: ["event"]
 body:
   - type: markdown
     attributes:
       value: |
-        Submitting this form adds the event to **Upcoming Events** on [proto.college](https://proto.college) within a few minutes.
+        Submitting this form adds the event to **Upcoming Events** on [protocollege.org](https://protocollege.org) within a few minutes.
 
         - **To change or cancel an event**, submit the form again with the **same title and date**. It replaces the earlier entry.
         - You can also skip this form and add a markdown file to `src/events/` directly, copying `src/events/_template.md`.

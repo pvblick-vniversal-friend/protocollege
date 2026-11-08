@@ -1,4 +1,4 @@
-# Rebuilds proto.college every night so events drop off "Upcoming Events" the
+# Rebuilds protocollege.org every night so events drop off "Upcoming Events" the
 # day after they happen, even when nothing new has been pushed.
 #
 # Setup: in Vercel, Project Settings → Git → Deploy Hooks, create a hook for the

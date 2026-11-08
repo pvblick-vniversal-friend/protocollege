@@ -1,6 +1,6 @@
 # Publishes events submitted through the "New event" issue form
 # (.github/ISSUE_TEMPLATE/new-event.yml) as markdown files in src/events/.
-# Vercel rebuilds proto.college on the resulting push to main.
+# Vercel rebuilds protocollege.org on the resulting push to main.
 name: Add event from issue
 
 on:
