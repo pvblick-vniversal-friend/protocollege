@@ -89,9 +89,7 @@ date: 2025-01-15
 tags: announcement
 ---
 
-# My Blog Post
-
-Content here...
+Content here... (the layout shows the title, so don't repeat it as a `#` heading)
 ```
 
 #### Events and sessions
