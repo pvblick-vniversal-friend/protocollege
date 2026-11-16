@@ -45,6 +45,12 @@ module.exports = function(eleventyConfig) {
     return DateTime.fromJSDate(dateObj, { zone: "utc" }).toFormat("yyyy-LL-dd");
   });
 
+  // For feed.xml. The RSS plugin's dateToRfc822 reads the build machine's
+  // local time but labels it +0000, so format in UTC here instead.
+  eleventyConfig.addFilter("rfc822Date", (dateObj) => {
+    return DateTime.fromJSDate(dateObj, { zone: "utc" }).toRFC2822();
+  });
+
   eleventyConfig.addFilter("sortByDate", (array) => {
     return array.sort((a, b) => {
       return (b.data.date || 0) - (a.data.date || 0);
