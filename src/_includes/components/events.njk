@@ -19,6 +19,9 @@
 <p class="event-guest">with {{ event.guest }}</p>
 {%- endif %}
 <p class="event-when"><time datetime="{{ event.date }}{% if event.time %}T{{ event.time }}{% endif %}">{{ event | eventWhen }}</time></p>
+{%- if event.location %}
+<p class="event-where">{{ event.location }}</p>
+{%- endif %}
 {%- if event.topic %}
 <p class="event-topic">{{ event.topic }}</p>
 {%- endif %}

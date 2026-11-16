@@ -1,6 +1,35 @@
 {
   "appearances": [
     {
+      "type": "Symposium",
+      "session": "Scientific Protocols: the Making and Breaking of Scientific Norms",
+      "event": "PSA 2026",
+      "eventFull": "Philosophy of Science Association, 30th Biennial Meeting (Area: General Philosophy of Science), in person",
+      "location": "San Diego, California",
+      "date": "2026-11-22",
+      "dateLabel": "22 November 2026, 9:00–11:45",
+      "description": "An in-person symposium on scientific protocols as the standardized, explicit procedures behind knowledge production and evidence-based policy, from laboratory instructions to disease diagnostics and community engagement. It asks how protocols turn abstract norms into specific instructions, what their virtues and limits are as norms caught between stability and variability, and what kind of entities protocols are. The talks connect protocols to reproducibility and epistemic justice, and make the case for doing philosophy of science from concrete protocol practice.",
+      "talks": [
+        {
+          "title": "Developing Protocols for Explanatory Modeling and Measuring: Insights from the Practice of In Vitro Reconstitution",
+          "speakers": "Andrew Bollhagen (UC Davis)"
+        },
+        {
+          "title": "Protocol Variation and the Methodological Principle of Invariance",
+          "speakers": "Yoshinari Yoshida (University of Copenhagen)"
+        },
+        {
+          "title": "Creeping Doubt of Chronicity",
+          "speakers": "Rena Alcalay (TUM)"
+        },
+        {
+          "title": "The Non-Epistemic Dimension of Scientific Protocols",
+          "speakers": "Daan Kenis (University of Antwerp) and Federica Bocchi (University of Copenhagen)"
+        }
+      ],
+      "link": "/assets/PSA2026_protocol_symposium.pdf"
+    },
+    {
       "type": "Organized session",
       "session": "The Life of Protocols in the Life Sciences",
       "event": "ISHPSSB 2025",

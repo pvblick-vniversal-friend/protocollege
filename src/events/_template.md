@@ -16,6 +16,7 @@ type: reading-group       # reading-group | working-group | workshop | session |
 status: confirmed         # confirmed | tbc | cancelled
 topic: One line on what the session is about
 guest: Name of a guest or presenter     # optional
+location: In person · Room 101, Some University   # optional; leave out for online sessions
 readings:                 # optional, one per line
   - Galloway (2006) Protocol
 join: https://ucph-ku.zoom.us/j/9667908137?pwd=Umvk7pdiuDEnmsNJxcTX3FkxMCHQ0C.1&omn=69751443420
