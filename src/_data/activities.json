@@ -68,58 +68,47 @@
     },
 
     {
-      "title": "SIG: Standardization & Variability in Biosciences",
-      "status": "forming",
-      "description": "A special interest group on standardization in the scientific practices, mostly the empirical and experimental ones: how standards hold together, and what varies underneath them anyway.",
+      "title": "Collaborative Essay",
+      "status": "ongoing",
+      "description": "An essay we write together and publish as the Protocollege, to experiment with the protocols of publishing: format, authorship, crediting, and how many people write one text.",
+      "note": "Project page under construction.",
+      "link": "/collaborative-essay/",
+      "linkText": "About the essay",
       "tags": [
-        "sig"
-      ],
-      "interest": true
-    },
-    
-    {
-      "title": "SIG: Integral Protocol Theory",
-      "status": "forming",
-      "description": "A special interest group working towards an empirically-based transdisciplinary philosophy of protocolization",
-      "tags": [
-        "sig"
-      ],
-      "interest": true
-    },
-
-    {
-      "title": "SIG: Ethnography of the “Boring”",
-      "status": "forming",
-      "description": "Taking up Susan Leigh Star's provocation to study boring things, and working out the methods for it — somewhere between archival and documentary research and ethnomethodology.",
-      "interest": true,
-      "tags": [
-        "sig",
-        "methods"
+        "writing",
+        "authorship"
       ]
     },
 
     {
-      "title": "SIG: The Procedural Mind",
-      "status": "forming",
-      "description": "Where the micro-sociology of practice meets cognitive science and psychology: what following a procedure does to, and asks of, a mind.",
-      "interest": true,
-      "tags": [
-        "sig",
-        "cognition"
-      ]
-    },
-
-    {
-      "title": "Protocol Studies Concept Cartography",
-      "status": "forming",
-      "description": "Mapping the conceptual space of protocol studies: definitions, characterisations, examples and the routes between ideas. Modelled on Concept Cartography, which grew out of a reading group on epistemic diversity and whose cartographers include two Protocollege members.",
-      "link": "https://conceptcartography.github.io/conceptcartography/",
-      "linkText": "Concept Cartography",
-      "interest": true,
+      "title": "Conceptual Engineering & Cartography of Protocol",
+      "status": "ongoing",
+      "description": "Mapping protocol and its related notions, with a focus on the distinctions between them, to understand if and when we are talking about the same thing.",
+      "note": "Project page under construction.",
+      "link": "/concept-cartography/",
+      "linkText": "About the project",
       "tags": [
         "concepts",
         "mapping"
       ]
+    }
+  ],
+  "sigTopics": [
+    {
+      "title": "Standardization & Variability in Biosciences",
+      "description": "Standardization in the scientific practices, mostly the empirical and experimental ones: how standards hold together, and what varies underneath them anyway."
+    },
+    {
+      "title": "Integral Protocol Theory",
+      "description": "Working towards an empirically-based transdisciplinary philosophy of protocolization."
+    },
+    {
+      "title": "Ethnography of the “Boring”",
+      "description": "Taking up Susan Leigh Star's provocation to study boring things, and working out the methods for it — somewhere between archival and documentary research and ethnomethodology."
+    },
+    {
+      "title": "The Procedural Mind",
+      "description": "Where the micro-sociology of practice meets cognitive science and psychology: what following a procedure does to, and asks of, a mind."
     }
   ],
   "potentials": [

@@ -1607,6 +1607,19 @@ pre code {
     color: var(--color-primary);
 }
 
+/* Placeholder banner for project pages that are still being written. */
+.construction-note {
+    padding: 0.75rem 1rem;
+    border: 1px dashed rgba(255, 166, 15, 0.6);
+    border-radius: 12px;
+    background-color: rgba(255, 193, 77, 0.12);
+    font-size: 0.9rem;
+}
+
+.construction-note::before {
+    content: "🚧 ";
+}
+
 .potential-list {
     padding-left: 1.25rem;
 }
